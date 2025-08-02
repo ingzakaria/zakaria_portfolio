@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio Zakaria Essahraouy - Version En Ligne</title>
+  <meta name="description" content="Portfolio professionnel de Zakaria Essahraouy, Ingénieur en Génie Industriel et Logistique. Expert en optimisation des processus industriels, Lean Management et visualisation de données." />
+  <meta name="keywords" content="Zakaria Essahraouy, portfolio, ingénieur, génie industriel, logistique, OCP, Lean Management, Power BI, Python" />
+  <meta name="author" content="Zakaria Essahraouy">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Portfolio Zakaria Essahraouy">
+  <meta property="og:description" content="Ingénieur en Génie Industriel et Logistique">
+  <meta property="og:type" content="website">
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* Reset & base */
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #0e0e0e;
+      color: #f0f0f0;
+      line-height: 1.6;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }
+    a {
+      color: #00bcd4;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    a:hover {
+      color: #009bbd;
+    }
+
+    /* Header */
+    header {
+      background: #1e1e1e;
+      padding: 60px 30px 30px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      position: relative;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.6);
+      animation: headerFadeZoom 1s ease forwards;
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    @keyframes headerFadeZoom {
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+    header h1 {
+      margin: 0;
+      font-weight: 600;
+      font-size: 3rem;
+    }
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+    }
+    header h3 {
+      margin: 0;
+      font-weight: 300;
+      font-size: 1.2rem;
+      color: #00bcd4;
+    }
+    nav {
+      margin-top: 25px;
+      display: flex;
+      gap: 25px;
+      flex-wrap: wrap;
+      justify-content: center;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+    nav a {
+      padding: 8px 16px;
+      border-radius: 25px;
+      background-color: transparent;
+      border: 2px solid transparent;
+      transition: background-color 0.3s ease, border-color 0.3s ease;
+    }
+    nav a:hover {
+      background-color: #00bcd4;
+      color: #0e0e0e;
+      border-color: #00bcd4;
+      box-shadow: 0 4px 8px rgba(0,188,212,0.4);
+    }
+
+    /* Sections */
+    section {
+      background: #1a1a1a;
+      margin: 60px auto;
+      padding: 80px 40px;
+      max-width: 1000px;
+      border-radius: 16px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+      opacity: 0;
+      transform: translateY(30px);
+      animation: sectionFadeIn 0.8s ease forwards;
+    }
+    @media (max-width: 768px) {
+      section {
+        margin: 30px 20px;
+        padding: 40px 20px;
+      }
+    }
+    @keyframes sectionFadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    section:nth-child(2) { animation-delay: 0.1s; }
+    section:nth-child(3) { animation-delay: 0.2s; }
+    section:nth-child(4) { animation-delay: 0.3s; }
+    section:nth-child(5) { animation-delay: 0.4s; }
+    section:nth-child(6) { animation-delay: 0.5s; }
+    section:nth-child(7) { animation-delay: 0.6s; }
+    section:nth-child(8) { animation-delay: 0.7s; }
+
+    h2 {
+      color: #00bcd4;
+      font-size: 2rem;
+      margin-bottom: 35px;
+      padding-bottom: 15px;
+      border-bottom: 2px solid #00bcd4;
+    }
+    @media (max-width: 768px) {
+      h2 {
+        font-size: 1.5rem;
+        margin-bottom: 25px;
+      }
+    }
+
+    /* Content */
+    .content {
+      padding: 25px;
+      border-radius: 12px;
+      background-color: #222222;
+      min-height: 80px;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+    @media (max-width: 768px) {
+      .content {
+        padding: 20px;
+        font-size: 1rem;
+      }
+    }
+    .content ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+    .content li {
+      margin-bottom: 15px;
+      padding-bottom: 10px;
+      color: #f0f0f0;
+    }
+    .content li strong {
+      color: #00bcd4;
+    }
+    .content p {
+      color: #f0f0f0;
+      margin: 0;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    /* Projects */
+    .project-item {
+      background-color: #222222;
+      border: 3px solid #ff6b35;
+      border-radius: 12px;
+      padding: 30px;
+      margin-bottom: 40px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+    @media (max-width: 768px) {
+      .project-item {
+        padding: 25px;
+        margin-bottom: 30px;
+      }
+    }
+    .project-item:hover {
+      transform: translateY(-5px);
+      border-color: #00bcd4;
+      box-shadow: 0 8px 25px rgba(0,188,212,0.3);
+    }
+    .project-item h3 {
+      color: #ff6b35;
+      margin-top: 0;
+      margin-bottom: 20px;
+      font-size: 1.5rem;
+      font-weight: 600;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+      background: linear-gradient(145deg, #2a2a2a, #1a1a1a);
+      padding: 15px 20px;
+      border-radius: 8px;
+      border: 1px solid #333;
+      box-shadow: 
+        inset 2px 2px 5px rgba(255,255,255,0.1),
+        inset -2px -2px 5px rgba(0,0,0,0.3),
+        0 4px 8px rgba(0,0,0,0.3);
+    }
+    .project-item p {
+      margin: 0 0 20px 0;
+      color: #e0e0e0;
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+    .project-item img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      margin: 20px 0;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+      display: block;
+      object-fit: cover;
+    }
+    .project-item img:hover {
+      transform: scale(1.02);
+      transition: transform 0.3s ease;
+    }
+
+    /* CV Section */
+    #cvViewer {
+      background-color: #222222;
+      border-radius: 12px;
+      min-height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    #cvViewer p {
+      margin: 10px 0;
+    }
+
+    /* Footer */
+    footer {
+      background: #1e1e1e;
+      text-align: center;
+      padding: 60px 30px;
+      margin-top: 60px;
+    }
+    @media (max-width: 768px) {
+      footer {
+        padding: 40px 20px;
+        margin-top: 40px;
+      }
+    }
+
+    /* Theme toggle */
+    #themeToggleBtn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      padding: 8px 14px;
+      font-size: 0.9rem;
+      border-radius: 30px;
+      background-color: #333333;
+      color: #f0f0f0;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    #themeToggleBtn:hover {
+      background-color: #00bcd4;
+      color: #0e0e0e;
+    }
+
+    /* Light theme */
+    body.light-theme {
+      background-color: #f5f5f5;
+      color: #333333;
+    }
+    body.light-theme header,
+    body.light-theme section,
+    body.light-theme footer {
+      background: #ffffff;
+      color: #333333;
+    }
+    body.light-theme .content,
+    body.light-theme #cvViewer,
+    body.light-theme .project-item {
+      background-color: #f8f8f8;
+      color: #333333;
+    }
+    body.light-theme .project-item {
+      border-color: #e67e22;
+    }
+    body.light-theme .project-item:hover {
+      border-color: #00bcd4;
+    }
+    body.light-theme .project-item h3 {
+      color: #e67e22;
+      background: linear-gradient(145deg, #f8f8f8, #e8e8e8);
+      border: 1px solid #ddd;
+      box-shadow: 
+        inset 2px 2px 5px rgba(255,255,255,0.8),
+        inset -2px -2px 5px rgba(0,0,0,0.1),
+        0 4px 8px rgba(0,0,0,0.1);
+    }
+    body.light-theme .project-item p {
+      color: #555555;
+    }
+    body.light-theme .content li strong {
+      color: #e67e22;
+    }
+    body.light-theme .content p {
+      color: #1a1a1a;
+    }
+    body.light-theme .content li {
+      color: #333333;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <button id="themeToggleBtn">🌙</button>
+    <h1>Zakaria Essahraouy</h1>
+    <h3>Ingénieur en Génie Industriel et Logistique</h3>
+    <nav>
+      <a href="#about">À propos</a>
+      <a href="#education">Formation</a>
+      <a href="#experience">Expériences</a>
+      <a href="#projects">Projets</a>
+      <a href="#skills">Compétences</a>
+      <a href="#cv">CV</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>À propos</h2>
+    <div class="content">
+      <p>Ingénieur en formation spécialisé en Génie Industriel et Logistique à l'ENSA Berrechid, je développe une expertise approfondie dans l'optimisation des processus industriels, la gestion des flux, ainsi que dans la planification et le pilotage de la performance industrielle. Mes compétences englobent l'amélioration continue des systèmes de production, le suivi précis des indicateurs de performance, la gestion des non-conformités et le traitement efficace des anomalies. Je maîtrise également la conduite du changement et la résolution de problèmes techniques en environnement industriel. Par ailleurs, je possède une solide expérience en logistique et management de la chaîne d'approvisionnement (SCM), ainsi qu'une aptitude confirmée à analyser et suivre les KPI. Grâce à mes compétences avancées en Excel VBA et Power BI Service, je suis en mesure d'automatiser la production de rapports, facilitant ainsi la prise de décision stratégique et opérationnelle.</p>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Formation</h2>
+    <div class="content">
+      <ul>
+        <li><strong>2023 - 2026</strong> — École Nationale des Sciences Appliquées — Diplôme d'ingénieur d'état en Génie Industriel et Logistique</li>
+        <li><strong>2021 - 2023</strong> — Ecole Supérieure de Technologie Kénitra — Diplôme Universitaire de Technologie (DUT) — Génie électrique : Informatique Industrielle et Systèmes Automatisés</li>
+        <li><strong>2020 - 2021</strong> — Lycée IBN SINA : Brevet de technicien supérieur — dessin industriel et conception du produit</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>Expériences</h2>
+    <div class="content">
+      <ul>
+        <li><strong>Août 2024</strong> — Ingénieur Assistant – OCP Groupe<br>
+        📊 Optimisation de la chaîne logistique du soufre solide au port Jorf Lasfar<br>
+        📈 Visualisation des données via Power BI<br>
+        🤖 Automatisation des tarifs maritimes via Excel VBA</li>
+        
+        <li><strong>Avril - Août 2023</strong> — Technicien Supérieur – OCP Groupe<br>
+        🔧 Fiabilisation de la machine d'ensachage<br>
+        📋 Analyse critique des défaillances DMAIC</li>
+        
+        <li><strong>Août 2022</strong> — Stage d'observation – Marcont Structure<br>
+        🏭 Fabrication des candélabres</li>
+        
+        <li><strong>Août 2021</strong> — Stage d'observation – Global Watech</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projets</h2>
+    <div id="projectsList">
+      <!-- Projet 1 : SmartFactory -->
+      <div class="project-item">
+        <h3>🏭 SmartFactory – Application d'optimisation industrielle</h3>
+        <p>SmartFactory est une application que j'ai développée dans le cadre de mon stage d'ingénieur au sein de l'entreprise LEONI, spécialisée dans la fabrication de câblages automobiles. Cette solution a été conçue pour répondre aux besoins concrets du terrain en matière d'optimisation logistique, de gestion des flux et de pilotage de la performance industrielle. Développée en Python avec des technologies telles que PyQt5, VTK, SQLite et Power BI Service, l'application intègre cinq modules principaux : un module de classification ABC avec visualisation 3D des racks et répartition optimale des colis ; un sélecteur de cartons intelligent permettant de choisir l'emballage le plus adapté en fonction des dimensions et du taux de remplissage ; un tableau de bord KPI interactif pour le suivi des indicateurs de performance avec filtres, alertes automatiques, exports et carte de performance ; un module de classification par volume pour l'optimisation de l'espace de stockage ; et un module de visualisation 3D des emplacements logistiques pour faciliter la planification et les réaménagements. L'application offre une interface moderne avec mode sombre/clair, automatisation des rapports, filtres dynamiques et une forte orientation métier. Ce projet m'a permis de mettre en pratique mes compétences en ingénierie industrielle, tout en apportant une solution concrète et innovante aux enjeux opérationnels de l'usine.</p>
+        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAwIiBoZWlnaHQ9IjQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMjIyMjIyIi8+CiAgPHRleHQgeD0iNDAwIiB5PSIyMDAiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSI0OCIgZmlsbD0iIzAwYmNkNCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+🏭 SmartFactory</dGV4dD4KICA8dGV4dCB4PSI0MDAiIHk9IjI1MCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjI0IiBmaWxsPSIjZmY2YjM1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5BcHBsaWNhdGlvbiBkJ29wdGltaXNhdGlvbiBpbmR1c3RyaWVsbGU8L3RleHQ+CjxyZWN0IHg9IjEwMCIgeT0iMzAwIiB3aWR0aD0iNjAwIiBoZWlnaHQ9IjgwIiBmaWxsPSIjMzMzMzMzIiBzdHJva2U9IiMwMGJjZDQiIHN0cm9rZS13aWR0aD0iMiIvPgo8dGV4dCB4PSI0MDAiIHk9IjM1MCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE2IiBmaWxsPSIjY2NjIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5QeVF0NSArIFZUSyArIFNRTGl0ZSArIFBvd2VyIEJJPC90ZXh0Pgo8L3N2Zz4=" alt="SmartFactory Application" />
+      </div>
+
+      <!-- Projet 2 : PortCost Calculator -->
+      <div class="project-item">
+        <h3>🚢 PortCost Calculator</h3>
+        <p>Dans le cadre de mon stage chez le Groupe OCP, au sein du port de Jorf Lasfar, j'ai développé un outil d'automatisation du calcul des tarifs maritimes visant à optimiser le processus de cotation logistique. Conçu avec Excel et VBA, cet outil permet de calculer de manière automatique et fiable l'ensemble des coûts associés aux opérations portuaires, en prenant en compte plusieurs paramètres clés : type de conteneur, poids ou volume mais aussi les frais techniques spécifiques tels que le lamanage, le remorquage, le pilotage et le déhalage. L'outil intègre une base tarifaire évolutive. Ce projet a permis de réduire significativement le temps de traitement des cotations, de limiter les erreurs manuelles et d'améliorer la réactivité des équipes logistiques dans un environnement industriel exigeant. Il m'a permis de mettre en pratique mes compétences en automatisation de processus, logistique maritime, gestion des coûts portuaires et programmation VBA orientée terrain.</p>
+        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAwIiBoZWlnaHQ9IjQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMjIyMjIyIi8+CiAgPHRleHQgeD0iNDAwIiB5PSIyMDAiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSI0OCIgZmlsbD0iIzAwYmNkNCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+🚢 PortCost Calculator</dGV4dD4KICA8dGV4dCB4PSI0MDAiIHk9IjI1MCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjI0IiBmaWxsPSIjZmY2YjM1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5BdXRvbWF0aXNhdGlvbiBkZXMgdGFyaWZzIG1hcml0aW1lczwvdGV4dD4KICA8cmVjdCB4PSIxMDAiIHk9IjMwMCIgd2lkdGg9IjYwMCIgaGVpZ2h0PSI4MCIgZmlsbD0iIzMzMzMzMyIgc3Ryb2tlPSIjMDBiY2Q0IiBzdHJva2Utd2lkdGg9IjIiLz4KPHRleHQgeD0iNDAwIiB5PSIzNTAiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNiIgZmlsbD0iI2NjYyIgdGV4dC1hbmNob3I9Im1pZGRsZSI+RXhjZWwgVkJBIC0gUG9ydCBKb3JmIExhc2ZhciAtIE9DUCBPQ1A8L3RleHQ+Cjwvc3ZnPg==" alt="PortCost Calculator" />
+      </div>
+
+      <!-- Projet 3 : Automatisation du tri de colis -->
+      <div class="project-item">
+        <h3>🤖 Automatisation du tri de colis</h3>
+        <p>Dans le cadre d'un projet académique intitulé « Réalisation d'un Smart Entrepôt », j'ai contribué au développement d'un système intelligent dédié à l'automatisation du tri de colis. Ce projet vise à améliorer la performance logistique au sein d'un entrepôt connecté, en s'appuyant sur des technologies avancées. L'outil permet de trier les colis selon plusieurs critères clés tels que la destination, le volume, ou encore la fréquence de rotation, puis de les répartir de manière optimale dans les zones d'expédition. Ce projet m'a permis de mettre en pratique des compétences en logistique industrielle, optimisation d'espace, programmation orientée données et visualisation interactive, en répondant à des problématiques concrètes de gestion d'entrepôt.</p>
+        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAwIiBoZWlnaHQ9IjQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMjIyMjIyIi8+CiAgPHRleHQgeD0iNDAwIiB5PSIyMDAiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSI0OCIgZmlsbD0iIzAwYmNkNCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+🤖 Automatisation du tri de colis</dGV4dD4KICA8dGV4dCB4PSI0MDAiIHk9IjI1MCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjI0IiBmaWxsPSIjZmY2YjM1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5TbWFydCBFbnRyZXDDtHQgLSBUcmlhZ2UgYXV0b21hdGlzw6k8L3RleHQ+CjxyZWN0IHg9IjEwMCIgeT0iMzAwIiB3aWR0aD0iNjAwIiBoZWlnaHQ9IjgwIiBmaWxsPSIjMzMzMzMzIiBzdHJva2U9IiMwMGJjZDQiIHN0cm9rZS13aWR0aD0iMiIvPgo8dGV4dCB4PSI0MDAiIHk9IjM1MCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE2IiBmaWxsPSIjY2NjIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5Qcm9qZXQgYWNhZMOpbWlxdWUgLSBMb2dpc3RpcXVlIGluZHVzdHJpZWxsZTwvdGV4dD4KPC9zdmc+" alt="Automatisation du tri de colis" />
+      </div>
+
+      <!-- Projet 4 : BeerGame -->
+      <div class="project-item">
+        <h3>🍺 BeerGame</h3>
+        <p>Dans le cadre de ma formation en Génie Industriel & Logistique, j'ai participé au développement et à l'exploitation pédagogique du Beer Game, un jeu de simulation logistique destiné à illustrer les dynamiques de la chaîne d'approvisionnement. Ce jeu met en scène les différents acteurs d'une supply chain (client, distributeur, grossiste, fabricant), chacun devant prendre des décisions en temps réel sur les quantités à commander ou à produire, avec pour objectif de minimiser les coûts de stockage et de rupture tout en répondant à la demande. Le jeu met en évidence les effets du bullwhip effect (effet coup de fouet), et permet d'analyser l'impact du manque de coordination, de l'absence de visibilité et du retard d'information sur les performances globales. Ce projet m'a permis de comprendre les enjeux de la planification, de la coordination inter-niveaux, et d'illustrer de manière concrète l'importance d'une supply chain agile et collaborative.</p>
+        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAwIiBoZWlnaHQ9IjQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMjIyMjIyIi8+CiAgPHRleHQgeD0iNDAwIiB5PSIyMDAiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSI0OCIgZmlsbD0iIzAwYmNkNCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+🍺 BeerGame</dGV4dD4KICA8dGV4dCB4PSI0MDAiIHk9IjI1MCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjI0IiBmaWxsPSIjZmY2YjM1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5TaW11bGF0aW9uIGxvZ2lzdGlxdWUgLSBTdXBwbHkgQ2hhaW48L3RleHQ+CjxyZWN0IHg9IjEwMCIgeT0iMzAwIiB3aWR0aD0iNjAwIiBoZWlnaHQ9IjgwIiBmaWxsPSIjMzMzMzMzIiBzdHJva2U9IiMwMGJjZDQiIHN0cm9rZS13aWR0aD0iMiIvPgo8dGV4dCB4PSI0MDAiIHk9IjM1MCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE2IiBmaWxsPSIjY2NjIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5Qcm9qZXQgcMOpZGFnb2dpcXVlIC0gQnVsbHdoaXAgZWZmZWN0PC90ZXh0Pgo8L3N2Zz4=" alt="BeerGame Simulation" />
+      </div>
+
+      <!-- Projet 5 : Achat du camion 36T -->
+      <div class="project-item">
+        <h3>🚛 Achat du camion 36T</h3>
+        <p>Dans le cadre d'un projet académique, j'ai contribué au processus dédiée à la gestion des fournisseurs, à l'achat, à la gestion des devis et à la sélection des prestataires. Ce projet vise à optimiser le processus d'approvisionnement en automatisant la collecte et l'analyse des devis, en facilitant la comparaison des offres selon des critères définis (prix, qualité, délais, fiabilité), et en aidant à la prise de décision pour la sélection des fournisseurs les plus performants. Conçu avec des outils modernes de programmation et de gestion de bases de données, ce projet permet de réduire les délais administratifs, d'améliorer la traçabilité des achats et d'assurer un meilleur contrôle des coûts. Il contribue ainsi à renforcer la performance globale de la chaîne d'approvisionnement.</p>
+        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAwIiBoZWlnaHQ9IjQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMjIyMjIyIi8+CiAgPHRleHQgeD0iNDAwIiB5PSIyMDAiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSI0OCIgZmlsbD0iIzAwYmNkNCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+🚛 Achat du camion 36T</dGV4dD4KICA8dGV4dCB4PSI0MDAiIHk9IjI1MCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjI0IiBmaWxsPSIjZmY2YjM1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5HZXN0aW9uIGRlcyBmb3Vybmlzc2V1cnMgZXQgZGV2aXM8L3RleHQ+CjxyZWN0IHg9IjEwMCIgeT0iMzAwIiB3aWR0aD0iNjAwIiBoZWlnaHQ9IjgwIiBmaWxsPSIjMzMzMzMzIiBzdHJva2U9IiMwMGJjZDQiIHN0cm9rZS13aWR0aD0iMiIvPgo8dGV4dCB4PSI0MDAiIHk9IjM1MCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE2IiBmaWxsPSIjY2NjIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5Qcm9qZXQgYWNhZMOpbWlxdWUgLSBPcHRpbWlzYXRpb24gYXByb3Zpc2lvbm5lbWVudDwvdGV4dD4KPC9zdmc+" alt="Achat camion 36T" />
+      </div>
+
+      <!-- Projet 6 : Optimisation de la performance industrielle -->
+      <div class="project-item">
+        <h3>🏭 Optimisation de la performance industrielle</h3>
+        <p>DelicILI, avec ses 4 lignes de production dédiées à la préparation, au conditionnement et à la transformation de fruits locaux, rencontrait plusieurs dysfonctionnements dans son processus "Make". Ce projet d'optimisation industrielle visait à identifier, analyser et résoudre les problèmes de performance dans les processus de production. L'approche méthodique a permis d'améliorer l'efficacité opérationnelle, de réduire les temps d'arrêt et d'optimiser les flux de production. Ce projet m'a permis de mettre en pratique mes compétences en analyse de processus, résolution de problèmes industriels et amélioration continue, en répondant aux défis concrets d'une entreprise agroalimentaire.</p>
+        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAwIiBoZWlnaHQ9IjQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMjIyMjIyIi8+CiAgPHRleHQgeD0iNDAwIiB5PSIyMDAiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSI0OCIgZmlsbD0iIzAwYmNkNCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+🏭 Optimisation Performance</dGV4dD4KICA8dGV4dCB4PSI0MDAiIHk9IjI1MCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjI0IiBmaWxsPSIjZmY2YjM1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5EZWxpY0lMSSAtIDQgbGlnbmVzIGRlIHByb2R1Y3Rpb248L3RleHQ+CjxyZWN0IHg9IjEwMCIgeT0iMzAwIiB3aWR0aD0iNjAwIiBoZWlnaHQ9IjgwIiBmaWxsPSIjMzMzMzMzIiBzdHJva2U9IiMwMGJjZDQiIHN0cm9rZS13aWR0aD0iMiIvPgo8dGV4dCB4PSI0MDAiIHk9IjM1MCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE2IiBmaWxsPSIjY2NjIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj5BZ3JvYWxpbWVudGFpcmUgLSBSw6lzb2x1dGlvbiBkeXNmb25jdGlvbm5lbWVudHM8L3RleHQ+Cjwvc3ZnPg==" alt="Optimisation Performance Industrielle" />
+      </div>
+    </div>
+  </section>
+  
+  <section id="skills">
+    <h2>Compétences</h2>
+    <div class="content">
+      <ul>
+        <li><strong>Analyse et optimisation des processus de production</strong> pour améliorer la productivité et réduire les pertes</li>
+        <li><strong>Mise en place et suivi des indicateurs clés de performance (KPI)</strong> pour un pilotage efficace</li>
+        <li><strong>Gestion des non-conformités, analyse des causes racines</strong>, et mise en œuvre d'actions correctives</li>
+        <li><strong>Résolution rapide des problèmes techniques</strong> sur le terrain et accompagnement des équipes dans la conduite du changement</li>
+        <li><strong>Gestion et optimisation de la chaîne d'approvisionnement</strong>, planification des flux logistiques</li>
+        <li><strong>Gestion des stocks, approvisionnement</strong> et coordination avec les fournisseurs</li>
+        <li><strong>Analyse des flux et proposition d'améliorations</strong> pour réduire les délais et coûts</li>
+        <li><strong>Maîtrise avancée d'Excel VBA</strong> pour automatiser les tâches, créer des outils personnalisés et optimiser le traitement des données</li>
+        <li><strong>Conception et suivi de tableaux de bord dynamiques</strong> et interactifs avec Power BI Service</li>
+        <li><strong>Analyse des données pour le reporting</strong> et la prise de décision stratégique</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="cv">
+    <h2>CV</h2>
+    <div id="cvViewer">
+      <div style="text-align: center; padding: 40px;">
+        <p style="font-size: 1.2rem; margin-bottom: 20px; color: #00bcd4;">📄 CV Zakaria Essahraouy</p>
+        <p style="font-size: 1rem; margin-bottom: 15px; color: #e0e0e0;"><strong>Ingénieur en Génie Industriel et Logistique</strong></p>
+        <p style="font-size: 0.9rem; margin-bottom: 10px; color: #ccc;">Formation : ENSA Berrechid (2023-2026)</p>
+        <p style="font-size: 0.9rem; margin-bottom: 10px; color: #ccc;">Expérience : OCP Groupe, Marcont Structure, Global Watech</p>
+        <p style="font-size: 0.9rem; margin-bottom: 10px; color: #ccc;">Compétences : Excel VBA, Power BI, Lean Management, SCM</p>
+        <p style="font-size: 0.9rem; margin-bottom: 20px; color: #ccc;">Langues : Français, Arabe, Anglais</p>
+        <a href="mailto:essahraouyzakaria10@gmail.com" style="color: #00bcd4; text-decoration: none; font-weight: bold;">📧 Demander le CV complet</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="content">
+      <p>Email : <a href="mailto:essahraouyzakaria10@gmail.com">essahraouyzakaria10@gmail.com</a></p>
+      <p>LinkedIn : <a href="https://www.linkedin.com/in/essahraouy-zakaria-7692761b5" target="_blank" rel="noopener noreferrer">linkedin.com/in/essahraouy-zakaria</a></p>
+      <p>Téléphone : <a href="tel:+212655062895">+212 6 55 06 28 95</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Zakaria Essahraouy. Tous droits réservés.</p>
+  </footer>
+
+  <script>
+    // Theme toggle functionality
+    const themeToggleBtn = document.getElementById('themeToggleBtn');
+    const body = document.body;
+    
+    // Check for saved theme preference or default to dark
+    const currentTheme = localStorage.getItem('theme') || 'dark';
+    if (currentTheme === 'light') {
+      body.classList.add('light-theme');
+      themeToggleBtn.textContent = '☀️';
+    }
+    
+    themeToggleBtn.addEventListener('click', () => {
+      body.classList.toggle('light-theme');
+      const isLight = body.classList.contains('light-theme');
+      themeToggleBtn.textContent = isLight ? '☀️' : '🌙';
+      localStorage.setItem('theme', isLight ? 'light' : 'dark');
+    });
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+
+  </script>
+</body>
+</html> 
