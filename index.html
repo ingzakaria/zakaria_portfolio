@@ -1,1 +1,1223 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zakaria Es-Sahraouy — Ingénieur Industriel &amp; Logistique</title>
+<meta name="description" content="Portfolio de Zakaria Es-Sahraouy, ingénieur Génie Industriel &amp; Logistique (ENSA Berrechid) — optimisation de production, data &amp; IA industrielle, supply chain. Projet phare : TSP Logistics Manager v2.0 (OCP Group).">
+<meta name="author" content="Zakaria Es-Sahraouy">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Zakaria Es-Sahraouy — Ingénieur Industriel &amp; Logistique">
+<meta property="og:description" content="Optimisation de production, data &amp; IA industrielle, supply chain. Projet phare : TSP Logistics Manager v2.0 (OCP Group).">
+<meta property="og:image" content="og-cover.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230c1f33'/%3E%3Crect x='2' y='2' width='60' height='60' fill='none' stroke='%23f2a900' stroke-width='2'/%3E%3Ctext x='32' y='42' font-family='monospace' font-size='26' font-weight='700' fill='%23eaf2fa' text-anchor='middle'%3EZE%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --blueprint-900:#0c1f33;
+    --blueprint-800:#122c47;
+    --blueprint-line:#3d6d95;
+    --blueprint-line-soft:#2a4f70;
+    --paper-dim:#c9d7e2;
+    --amber:#f2a900;
+    --teal:#3fc1a6;
+    --text-lo:#8fa8bd;
+    --text-hi:#eaf2fa;
+    --card-bg:rgba(61,109,149,0.06);
+    --mono:'IBM Plex Mono', monospace;
+    --sans:'IBM Plex Sans', sans-serif;
+    --display:'Space Grotesk', sans-serif;
+  }
+  html[data-theme="light"]{
+    --blueprint-900:#eef2f6;
+    --blueprint-800:#e2e9f0;
+    --blueprint-line:#7ba0c2;
+    --blueprint-line-soft:#c3d4e3;
+    --paper-dim:#3c5674;
+    --amber:#c97b00;
+    --teal:#1f8a72;
+    --text-lo:#5b7690;
+    --text-hi:#0c1f33;
+    --card-bg:rgba(61,109,149,0.06);
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--blueprint-900);
+    color:var(--text-hi);
+    font-family:var(--sans);
+    line-height:1.6;
+    overflow-x:hidden;
+    transition:background .3s ease, color .3s ease;
+  }
+  @media (pointer:fine){
+    body{ cursor:none; }
+    #cursor-dot, #cursor-ring{ display:block; }
+  }
+  #cursor-dot, #cursor-ring{
+    display:none; position:fixed; top:0; left:0; z-index:999; pointer-events:none;
+    border-radius:50%;
+    transform:translate(-50%,-50%);
+  }
+  #cursor-dot{ width:4px; height:4px; background:var(--amber); }
+  #cursor-ring{
+    width:26px; height:26px; border:1px solid var(--amber);
+    transition:width .15s, height .15s, border-color .15s, opacity .15s;
+  }
+  #cursor-ring::before, #cursor-ring::after{
+    content:""; position:absolute; background:var(--amber);
+  }
+  #cursor-ring::before{ top:50%; left:-6px; width:5px; height:1px; transform:translateY(-50%); }
+  #cursor-ring::after{ top:-6px; left:50%; width:1px; height:5px; transform:translateX(-50%); }
+  .cursor-pointer #cursor-ring{ width:38px; height:38px; border-color:var(--teal); }
 
+  .skip-link{
+    position:absolute; left:-999px; top:0; z-index:200;
+    background:var(--amber); color:var(--blueprint-900);
+    padding:10px 16px; font-family:var(--mono); font-size:13px;
+  }
+  .skip-link:focus{ left:12px; top:12px; }
+
+  :focus-visible{ outline:2px solid var(--amber); outline-offset:3px; }
+
+  .grid-bg{
+    position:fixed; inset:0; z-index:0; pointer-events:none;
+    background-image:
+      linear-gradient(var(--blueprint-line-soft) 1px, transparent 1px),
+      linear-gradient(90deg, var(--blueprint-line-soft) 1px, transparent 1px);
+    background-size:44px 44px;
+    opacity:0.18;
+  }
+  .grid-bg::before{
+    content:"";
+    position:absolute; inset:0;
+    background-image:
+      linear-gradient(var(--blueprint-line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--blueprint-line) 1px, transparent 1px);
+    background-size:220px 220px;
+    opacity:0.35;
+  }
+  section, header, footer { position:relative; z-index:1; }
+
+  ::selection{ background:var(--amber); color:var(--blueprint-900); }
+
+  a{color:inherit; text-decoration:none;}
+
+  .wrap{ max-width:1080px; margin:0 auto; padding:0 32px; }
+
+  .tag{
+    font-family:var(--mono);
+    font-size:12px;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    color:var(--amber);
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+  }
+  .tag::before{
+    content:"";
+    width:18px; height:1px;
+    background:var(--amber);
+    display:inline-block;
+  }
+
+  /* NAV */
+  nav{
+    position:fixed; top:0; left:0; right:0; z-index:50;
+    background:rgba(12,31,51,0.85);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--blueprint-line-soft);
+  }
+  html[data-theme="light"] nav{ background:rgba(238,242,246,0.85); }
+  nav .wrap{
+    display:flex; align-items:center; justify-content:space-between;
+    height:64px;
+  }
+  .nav-brand{
+    font-family:var(--mono); font-size:14px; letter-spacing:0.08em;
+    color:var(--text-hi);
+  }
+  .nav-brand b{ color:var(--amber); }
+  .nav-right{ display:flex; align-items:center; gap:26px; }
+  .nav-links{ display:flex; gap:28px; font-family:var(--mono); font-size:12px; letter-spacing:0.05em; text-transform:uppercase;}
+  .nav-links a{ color:var(--text-lo); transition:color .2s; }
+  .nav-links a:hover{ color:var(--text-hi); }
+  .nav-links span{ color:var(--amber); }
+  .nav-toggles{ display:flex; gap:8px; }
+  .toggle-btn{
+    font-family:var(--mono); font-size:11px; letter-spacing:0.05em;
+    border:1px solid var(--blueprint-line-soft);
+    background:transparent; color:var(--text-hi);
+    padding:7px 10px; cursor:pointer;
+  }
+  .toggle-btn:hover{ border-color:var(--amber); color:var(--amber); }
+
+  @media (max-width:720px){ .nav-links{ display:none; } }
+
+  /* HERO */
+  header.hero{
+    min-height:100vh;
+    display:flex; flex-direction:column; justify-content:center;
+    padding-top:64px;
+  }
+  .hero-inner{
+    display:grid;
+    grid-template-columns:1.3fr 1fr;
+    gap:48px;
+    align-items:center;
+  }
+  @media (max-width:860px){ .hero-inner{ grid-template-columns:1fr; } }
+
+  .hero-title{
+    font-family:var(--display);
+    font-weight:700;
+    font-size:clamp(40px, 6vw, 68px);
+    line-height:1.02;
+    letter-spacing:-0.01em;
+    margin:18px 0 20px;
+  }
+  .hero-title .accent{ color:var(--amber); }
+  .hero-desc{
+    color:var(--paper-dim);
+    font-size:17px;
+    max-width:52ch;
+    margin-bottom:28px;
+  }
+  .hero-cta{ display:flex; gap:16px; flex-wrap:wrap; }
+  .btn{
+    font-family:var(--mono);
+    font-size:13px;
+    letter-spacing:0.04em;
+    padding:14px 22px;
+    border:1px solid var(--blueprint-line);
+    display:inline-flex; align-items:center; gap:10px;
+    transition:all .2s;
+    background:transparent;
+    cursor:pointer;
+  }
+  .btn-primary{ background:var(--amber); color:var(--blueprint-900); border-color:var(--amber); font-weight:600; }
+  .btn-primary:hover{ background:transparent; color:var(--amber); }
+  .btn-ghost{ color:var(--text-hi); }
+  .btn-ghost:hover{ border-color:var(--text-hi); }
+
+  /* Right column: emblem + schematic stacked */
+  .hero-right{ display:flex; flex-direction:column; gap:20px; }
+
+  /* Engineering seal / emblem — signature element in lieu of a photo */
+  .emblem{
+    border:1px solid var(--blueprint-line);
+    padding:22px;
+    display:flex; align-items:center; gap:18px;
+    background:var(--card-bg);
+  }
+  .emblem svg{ width:74px; height:74px; flex-shrink:0; }
+  .emblem-name{ font-family:var(--display); font-weight:700; font-size:15px; }
+  .emblem-role{ font-family:var(--mono); font-size:11px; color:var(--text-lo); margin-top:4px; letter-spacing:0.03em;}
+  .emblem-stamp{ font-family:var(--mono); font-size:10px; color:var(--teal); margin-top:8px; letter-spacing:0.06em; }
+
+  /* Schematic panel signature element */
+  .schematic{
+    border:1px solid var(--blueprint-line);
+    padding:20px;
+    position:relative;
+    background:var(--card-bg);
+  }
+  .schematic .corner{
+    position:absolute; width:10px; height:10px;
+    border:1px solid var(--amber);
+  }
+  .corner.tl{ top:-1px; left:-1px; border-right:none; border-bottom:none;}
+  .corner.tr{ top:-1px; right:-1px; border-left:none; border-bottom:none;}
+  .corner.bl{ bottom:-1px; left:-1px; border-right:none; border-top:none;}
+  .corner.br{ bottom:-1px; right:-1px; border-left:none; border-top:none;}
+  .schematic-title{
+    font-family:var(--mono); font-size:11px; color:var(--text-lo);
+    text-transform:uppercase; letter-spacing:0.08em; margin-bottom:14px;
+    display:flex; justify-content:space-between;
+  }
+  .flow-step{
+    display:flex; align-items:center; gap:10px;
+    font-family:var(--mono); font-size:13px;
+    padding:9px 0;
+    border-bottom:1px dashed var(--blueprint-line-soft);
+    color:var(--text-hi);
+    opacity:0.25;
+    transition:opacity .5s ease;
+  }
+  .flow-step.lit{ opacity:1; }
+  .flow-step:last-child{ border-bottom:none; }
+  .flow-step .dot{
+    width:7px; height:7px; border-radius:50%;
+    background:var(--blueprint-line-soft); flex-shrink:0;
+    transition:background .5s ease, box-shadow .5s ease;
+  }
+  .flow-step.lit .dot{ background:var(--teal); box-shadow:0 0 8px var(--teal); }
+  .flow-step.lit .dot.amber-dot{ background:var(--amber); box-shadow:0 0 8px var(--amber); }
+  .flow-step .lbl{ color:var(--text-lo); font-size:11px; margin-left:auto; }
+
+  /* KPI PANEL - control panel signature */
+  .kpi-section{ padding:100px 0 60px; }
+  .kpi-head{ margin-bottom:44px; }
+  .kpi-head h2{
+    font-family:var(--display); font-size:clamp(26px,3.4vw,36px);
+    font-weight:600; margin-top:12px;
+  }
+  .kpi-note{ color:var(--text-lo); font-size:13px; margin-top:10px; max-width:60ch;}
+  .kpi-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    border:1px solid var(--blueprint-line-soft);
+  }
+  @media (max-width:820px){ .kpi-grid{ grid-template-columns:repeat(2,1fr);} }
+  .kpi-cell{
+    padding:28px 22px;
+    border-right:1px solid var(--blueprint-line-soft);
+    border-bottom:1px solid var(--blueprint-line-soft);
+    position:relative;
+  }
+  .kpi-cell:nth-child(4n){ border-right:none; }
+  .kpi-cell::before{
+    content:attr(data-idx);
+    font-family:var(--mono); font-size:10px; color:var(--text-lo);
+    position:absolute; top:10px; right:12px;
+  }
+  .kpi-value{
+    font-family:var(--mono); font-weight:600;
+    font-size:clamp(24px,3vw,32px);
+    color:var(--teal);
+  }
+  .kpi-value.warn{ color:var(--amber); }
+  .kpi-label{
+    font-size:12px; color:var(--paper-dim);
+    margin-top:8px; line-height:1.4;
+  }
+
+  /* SECTION HEADER pattern */
+  .sec{ padding:90px 0; }
+  .sec-head{ margin-bottom:44px; }
+  .sec-head h2{
+    font-family:var(--display); font-weight:600;
+    font-size:clamp(26px,3.4vw,36px);
+    margin-top:12px;
+  }
+
+  /* TIMELINE */
+  .timeline{ border-left:1px solid var(--blueprint-line); padding-left:0; }
+  .t-item{
+    display:grid;
+    grid-template-columns:120px 1fr;
+    gap:20px;
+    padding:22px 0 22px 28px;
+    border-bottom:1px solid var(--blueprint-line-soft);
+    position:relative;
+  }
+  .t-item:last-child{ border-bottom:none; }
+  .t-item::before{
+    content:""; position:absolute; left:-5px; top:28px;
+    width:9px; height:9px; border-radius:50%;
+    background:var(--blueprint-900); border:2px solid var(--amber);
+  }
+  .t-year{ font-family:var(--mono); font-size:13px; color:var(--amber); }
+  .t-title{ font-family:var(--display); font-weight:600; font-size:17px; margin-bottom:4px;}
+  .t-desc{ color:var(--paper-dim); font-size:14px; }
+  @media (max-width:600px){ .t-item{ grid-template-columns:1fr; gap:6px; } }
+
+  /* PROJECT (flagship) */
+  .project-card{
+    border:1px solid var(--blueprint-line-soft);
+    padding:36px;
+    background:var(--card-bg);
+  }
+  .project-top{
+    display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:16px;
+    margin-bottom:18px;
+  }
+  .project-name{ font-family:var(--display); font-size:26px; font-weight:700; }
+  .project-sub{ color:var(--text-lo); font-family:var(--mono); font-size:12px; margin-top:6px;}
+  .project-desc{ color:var(--paper-dim); font-size:15px; margin-bottom:26px; max-width:70ch; }
+  .module-grid{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:1px;
+    background:var(--blueprint-line-soft);
+    border:1px solid var(--blueprint-line-soft);
+  }
+  @media (max-width:760px){ .module-grid{ grid-template-columns:repeat(2,1fr);} }
+  .module{
+    background:var(--blueprint-900);
+    padding:18px;
+  }
+  .module-num{ font-family:var(--mono); font-size:11px; color:var(--amber); }
+  .module-name{ font-family:var(--sans); font-weight:600; font-size:14px; margin:8px 0 6px; }
+  .module-desc{ font-size:12.5px; color:var(--text-lo); }
+  .project-actions{ display:flex; gap:14px; flex-wrap:wrap; margin-top:26px; }
+
+  /* GALLERY */
+  .gallery-grid{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:20px;
+  }
+  @media (max-width:860px){ .gallery-grid{ grid-template-columns:repeat(2,1fr);} }
+  @media (max-width:600px){ .gallery-grid{ grid-template-columns:1fr;} }
+  .gallery-item{
+    border:1px solid var(--blueprint-line-soft);
+    background:var(--card-bg);
+    overflow:hidden;
+    cursor:pointer;
+  }
+  .gallery-thumb{
+    position:relative; aspect-ratio:16/10; overflow:hidden;
+    border-bottom:1px solid var(--blueprint-line-soft);
+  }
+  .gallery-thumb img{
+    width:100%; height:100%; object-fit:cover; object-position:top;
+    display:block;
+    transition:transform .4s ease;
+  }
+  .gallery-item:hover .gallery-thumb img{ transform:scale(1.05); }
+  .gallery-cap{ padding:14px 16px; }
+  .gallery-num{ font-family:var(--mono); font-size:10px; color:var(--amber); letter-spacing:0.08em; }
+  .gallery-title{ font-family:var(--sans); font-weight:600; font-size:13.5px; margin-top:6px; }
+
+  /* Lightbox */
+  #lightbox{
+    position:fixed; inset:0; z-index:200;
+    background:rgba(6,14,24,0.92);
+    display:none; align-items:center; justify-content:center;
+    padding:40px; flex-direction:column; gap:16px;
+  }
+  #lightbox.open{ display:flex; }
+  #lightbox img{ max-width:min(1100px,92vw); max-height:75vh; border:1px solid var(--blueprint-line); }
+  #lightbox-cap{ font-family:var(--mono); font-size:13px; color:var(--text-hi); text-align:center; }
+  #lightbox-close{
+    position:absolute; top:24px; right:32px;
+    font-family:var(--mono); font-size:22px; color:var(--text-hi);
+    background:none; border:none; cursor:pointer;
+  }
+
+  /* EXPERIENCE */
+  .exp-item{
+    display:grid; grid-template-columns:1fr; gap:8px;
+    padding:26px 0;
+    border-bottom:1px solid var(--blueprint-line-soft);
+  }
+  .exp-item:last-child{ border-bottom:none; }
+  .exp-head{ display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px; }
+  .exp-role{ font-family:var(--display); font-weight:600; font-size:18px; }
+  .exp-org{ color:var(--amber); font-family:var(--mono); font-size:12px; }
+  .exp-meta{ color:var(--text-lo); font-family:var(--mono); font-size:11.5px; margin-top:2px; }
+  .exp-subject{ color:var(--text-hi); font-size:13.5px; font-style:italic; margin:8px 0 4px; max-width:75ch; }
+  .exp-desc{ color:var(--paper-dim); font-size:14px; max-width:75ch; }
+
+  /* SKILLS */
+  .skills-grid{
+    display:grid; grid-template-columns:repeat(2,1fr); gap:1px;
+    background:var(--blueprint-line-soft);
+    border:1px solid var(--blueprint-line-soft);
+  }
+  @media (max-width:700px){ .skills-grid{ grid-template-columns:1fr; } }
+  .skill-block{ background:var(--blueprint-900); padding:26px; }
+  .skill-cat{
+    font-family:var(--mono); font-size:11px; color:var(--amber);
+    text-transform:uppercase; letter-spacing:0.08em; margin-bottom:12px;
+  }
+  .skill-tags{ display:flex; flex-wrap:wrap; gap:8px; }
+  .skill-tags span{
+    font-size:12.5px; font-family:var(--mono);
+    border:1px solid var(--blueprint-line-soft);
+    padding:6px 10px;
+    color:var(--text-hi);
+  }
+
+  /* OTHER PROJECTS */
+  .mini-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:20px; }
+  @media (max-width:700px){ .mini-grid{ grid-template-columns:1fr; } }
+  .mini-card{ border:1px solid var(--blueprint-line-soft); padding:22px; }
+  .mini-title{ font-family:var(--display); font-weight:600; font-size:15px; margin-bottom:8px;}
+  .mini-desc{ font-size:13px; color:var(--text-lo); }
+
+  /* RECOMMENDATIONS */
+  .rec-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:20px; }
+  @media (max-width:700px){ .rec-grid{ grid-template-columns:1fr; } }
+  .rec-card{ border:1px solid var(--blueprint-line-soft); padding:26px; position:relative; }
+  .rec-quote{ font-size:14.5px; font-style:italic; color:var(--paper-dim); margin-bottom:16px; }
+  .rec-who{ font-family:var(--mono); font-size:12px; color:var(--amber); }
+  .rec-role{ font-family:var(--mono); font-size:11px; color:var(--text-lo); margin-top:2px; }
+
+  /* CONTACT / FOOTER */
+  footer{
+    border-top:1px solid var(--blueprint-line-soft);
+    padding:80px 0 40px;
+  }
+  .contact-inner{
+    display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:30px;
+  }
+  .contact-title{
+    font-family:var(--display); font-weight:700;
+    font-size:clamp(30px,4vw,44px);
+    max-width:14ch;
+  }
+  .contact-list{ display:flex; flex-direction:column; gap:10px; font-family:var(--mono); font-size:14px; }
+  .contact-list a{ color:var(--text-hi); border-bottom:1px solid transparent; }
+  .contact-list a:hover{ border-color:var(--amber); color:var(--amber); }
+  .copyright{
+    margin-top:60px; font-family:var(--mono); font-size:11px; color:var(--text-lo);
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;
+  }
+
+  .reveal{ opacity:0; transform:translateY(16px); transition:opacity .6s ease, transform .6s ease; }
+  .reveal.in{ opacity:1; transform:translateY(0); }
+
+  @media (prefers-reduced-motion: reduce){
+    .reveal{ opacity:1; transform:none; transition:none; }
+    .flow-step{ opacity:1; }
+    html{ scroll-behavior:auto; }
+  }
+</style>
+</head>
+<body>
+
+<a href="#main" class="skip-link" data-i18n="skip">Aller au contenu principal</a>
+<div id="cursor-dot"></div>
+<div id="cursor-ring"></div>
+<div class="grid-bg"></div>
+
+<nav>
+  <div class="wrap">
+    <div class="nav-brand">ZAKARIA<b>.</b>GIL</div>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="#projet" data-i18n="nav1">01 <span>/</span> Projet</a>
+        <a href="#apercu" data-i18n="nav2">02 <span>/</span> Aperçu</a>
+        <a href="#parcours" data-i18n="nav3">03 <span>/</span> Parcours</a>
+        <a href="#experience" data-i18n="nav4">04 <span>/</span> Expérience</a>
+        <a href="#competences" data-i18n="nav5">05 <span>/</span> Compétences</a>
+        <a href="#contact" data-i18n="nav6">06 <span>/</span> Contact</a>
+      </div>
+      <div class="nav-toggles">
+        <button class="toggle-btn" id="theme-toggle" aria-label="Changer de thème">☾/☀</button>
+        <button class="toggle-btn" id="lang-toggle" aria-label="Switch language">FR/EN</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main id="main">
+<header class="hero">
+  <div class="wrap hero-inner">
+    <div>
+      <span class="tag" data-i18n="heroTag">Fiche technique — profil ingénieur</span>
+      <h1 class="hero-title" data-i18n="heroTitle">Zakaria<br><span class="accent">Ingénieur Industriel</span><br>&amp; Logistique</h1>
+      <p class="hero-desc" data-i18n="heroDesc">
+        Diplômé du cycle Génie Industriel &amp; Logistique de l'ENSA Berrechid (2023–2026).
+        Je conçois des systèmes de pilotage de production et d'optimisation logistique
+        qui allient recherche opérationnelle, IA et terrain industriel.
+      </p>
+      <div class="hero-cta">
+        <a href="#projet" class="btn btn-primary" data-i18n="ctaProject">Voir le projet phare →</a>
+        <a href="cv-zakaria-essahraouy.pdf" class="btn btn-ghost" data-i18n="ctaCV">Télécharger le CV ↓</a>
+        <a href="#contact" class="btn btn-ghost" data-i18n="ctaContact">Me contacter</a>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="emblem">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="50" cy="50" r="47" fill="none" stroke="var(--blueprint-line)" stroke-width="1.5"/>
+          <circle cx="50" cy="50" r="38" fill="none" stroke="var(--blueprint-line-soft)" stroke-width="1" stroke-dasharray="2 3"/>
+          <path d="M50 14 L50 22 M50 78 L50 86 M14 50 L22 50 M78 50 L86 50" stroke="var(--amber)" stroke-width="1.5"/>
+          <text x="50" y="58" font-family="'IBM Plex Mono', monospace" font-size="26" font-weight="600" fill="var(--text-hi)" text-anchor="middle">ZE</text>
+          <text x="50" y="72" font-family="'IBM Plex Mono', monospace" font-size="7" fill="var(--teal)" text-anchor="middle" letter-spacing="1">GIL · 2026</text>
+        </svg>
+        <div>
+          <div class="emblem-name">Zakaria Es-Sahraouy</div>
+          <div class="emblem-role" data-i18n="emblemRole">Ingénieur Génie Industriel &amp; Logistique</div>
+          <div class="emblem-stamp" data-i18n="emblemStamp">◆ ENSA BERRECHID — DIPLÔMÉ 2026</div>
+        </div>
+      </div>
+
+      <div class="schematic">
+        <span class="corner tl"></span><span class="corner tr"></span>
+        <span class="corner bl"></span><span class="corner br"></span>
+        <div class="schematic-title"><span data-i18n="schemTitle">Process — Pilotage Production</span><span>TSP HUB 2</span></div>
+        <div class="flow-step" data-step><span class="dot"></span> <span data-i18n="schem1">SOL — Sollicitation</span> <span class="lbl" data-i18n="schem1lbl">Entrée</span></div>
+        <div class="flow-step" data-step><span class="dot"></span> <span data-i18n="schem2">GRA — Gestion / Arbitrage</span> <span class="lbl" data-i18n="schem2lbl">TRS · OEE</span></div>
+        <div class="flow-step" data-step><span class="dot"></span> <span data-i18n="schem3">STA — Stabilisation</span> <span class="lbl" data-i18n="schem3lbl">Sortie</span></div>
+        <div class="flow-step" data-step style="border-top:1px solid var(--blueprint-line-soft); margin-top:6px; padding-top:16px;">
+          <span class="dot amber-dot"></span> <span data-i18n="schem4">6 algorithmes d'optimisation</span> <span class="lbl">MILP · GA · RL</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="kpi-section">
+  <div class="wrap">
+    <div class="kpi-head reveal">
+      <span class="tag" data-i18n="kpiTag">Résultats — projet de fin d'études</span>
+      <h2 data-i18n="kpiTitle">Impact mesuré sur TSP Hub 2</h2>
+      <p class="kpi-note" data-i18n="kpiNote">Chiffres projetés sur la durée du PFE (4 mois), à confirmer en exploitation continue.</p>
+    </div>
+    <div class="kpi-grid reveal">
+      <div class="kpi-cell" data-idx="01">
+        <div class="kpi-value" data-count data-target="13.2" data-suffix=" pts" data-prefix="+">+0 pts</div>
+        <div class="kpi-label" data-i18n="kpi1">TRS (Taux de Rendement Synthétique)</div>
+      </div>
+      <div class="kpi-cell" data-idx="02">
+        <div class="kpi-value warn" data-count data-target="36" data-suffix="%" data-prefix="−">−0%</div>
+        <div class="kpi-label" data-i18n="kpi2">Arrêts non planifiés</div>
+      </div>
+      <div class="kpi-cell" data-idx="03">
+        <div class="kpi-value" data-count data-target="94.5" data-suffix="%">0%</div>
+        <div class="kpi-label" data-i18n="kpi3">Disponibilité opérationnelle</div>
+      </div>
+      <div class="kpi-cell" data-idx="04">
+        <div class="kpi-value" data-count data-target="0.847" data-prefix="F1 " data-decimals="3">F1 0.000</div>
+        <div class="kpi-label" data-i18n="kpi4">Chatbot NLP (TF-IDF + RandomForest)</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="projet">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="tag" data-i18n="projTag">Projet phare — PFE</span>
+      <h2>TSP Logistics Manager v2.0</h2>
+    </div>
+    <div class="project-card reveal">
+      <div class="project-top">
+        <div>
+          <div class="project-name" data-i18n="projName">Plateforme prescriptive de pilotage de production</div>
+          <div class="project-sub">OCP GROUP · TSP HUB 2 · PYTHON / PYQT6</div>
+        </div>
+      </div>
+      <p class="project-desc" data-i18n="projDesc">
+        Application desktop intelligente conçue pour transformer le pilotage de production
+        du réactif : simulation Monte Carlo, moteurs d'optimisation multiples, analyse des
+        coûts d'arrêt et assistant conversationnel intégré, au service des équipes SOL/GRA/STA.
+      </p>
+      <div class="module-grid">
+        <div class="module">
+          <div class="module-num">MODULE 01</div>
+          <div class="module-name" data-i18n="mod1n">Moteurs d'optimisation</div>
+          <div class="module-desc" data-i18n="mod1d">MILP, Génétique, Q-Learning, Greedy, Balance, Avancé — 6 approches comparées.</div>
+        </div>
+        <div class="module">
+          <div class="module-num">MODULE 02</div>
+          <div class="module-name" data-i18n="mod2n">Simulation Monte Carlo</div>
+          <div class="module-desc" data-i18n="mod2d">Décomposition de Cholesky pour modéliser les corrélations entre variables.</div>
+        </div>
+        <div class="module">
+          <div class="module-num">MODULE 03</div>
+          <div class="module-name" data-i18n="mod3n">StopCost Analyzer</div>
+          <div class="module-desc" data-i18n="mod3d">7 paliers de réduction du MTTR pour prioriser les actions correctives.</div>
+        </div>
+        <div class="module">
+          <div class="module-num">MODULE 04</div>
+          <div class="module-name" data-i18n="mod4n">Pilotage production</div>
+          <div class="module-desc" data-i18n="mod4d">Suivi des processus SOL → GRA → STA avec TRS / OEE en temps réel.</div>
+        </div>
+        <div class="module">
+          <div class="module-num">MODULE 05</div>
+          <div class="module-name" data-i18n="mod5n">Chatbot NLP</div>
+          <div class="module-desc" data-i18n="mod5d">TF-IDF + RandomForest pour répondre aux questions opérationnelles (F1 = 0.847).</div>
+        </div>
+        <div class="module">
+          <div class="module-num">MODULE 06</div>
+          <div class="module-name" data-i18n="mod6n">Interface PyQt6</div>
+          <div class="module-desc" data-i18n="mod6d">Tableau de bord desktop pensé pour un usage terrain, rapide et lisible.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="apercu">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="tag" data-i18n="galTag">Interface réelle</span>
+      <h2 data-i18n="galTitle">Aperçu de la plateforme</h2>
+    </div>
+    <div class="gallery-grid reveal">
+      <div class="gallery-item" data-cap-key="gal1">
+        <div class="gallery-thumb"><img src="assets/tsp-00-accueil.jpg" alt="Écran d'accueil TSP Logistics Manager" loading="lazy"></div>
+        <div class="gallery-cap"><div class="gallery-num">01</div><div class="gallery-title" data-i18n="gal1">Écran d'accueil — vue d'ensemble de la plateforme</div></div>
+      </div>
+      <div class="gallery-item" data-cap-key="gal2">
+        <div class="gallery-thumb"><img src="assets/tsp-00b-connexion.jpg" alt="Authentification à TSP Hub 2" loading="lazy"></div>
+        <div class="gallery-cap"><div class="gallery-num">02</div><div class="gallery-title" data-i18n="gal2">Authentification — accès sécurisé au TSP Hub 2</div></div>
+      </div>
+      <div class="gallery-item" data-cap-key="gal3">
+        <div class="gallery-thumb"><img src="assets/tsp-01-dashboard-silos.jpg" alt="Saisie et résultats de calcul — 20 silos TSP" loading="lazy"></div>
+        <div class="gallery-cap"><div class="gallery-num">03</div><div class="gallery-title" data-i18n="gal3">Saisie &amp; résultats — 20 silos en temps réel</div></div>
+      </div>
+      <div class="gallery-item" data-cap-key="gal4">
+        <div class="gallery-thumb"><img src="assets/tsp-01b-silos-cards.jpg" alt="Suivi visuel des silos par statut" loading="lazy"></div>
+        <div class="gallery-cap"><div class="gallery-num">04</div><div class="gallery-title" data-i18n="gal4">Suivi visuel des silos — statuts codés couleur</div></div>
+      </div>
+      <div class="gallery-item" data-cap-key="gal5">
+        <div class="gallery-thumb"><img src="assets/tsp-04-simulation-algos.jpg" alt="Simulation avancée — sélection des algorithmes" loading="lazy"></div>
+        <div class="gallery-cap"><div class="gallery-num">05</div><div class="gallery-title" data-i18n="gal5">Simulation avancée — 6 algorithmes disponibles</div></div>
+      </div>
+      <div class="gallery-item" data-cap-key="gal6">
+        <div class="gallery-thumb"><img src="assets/tsp-04b-rapport-milp.jpg" alt="Rapport de simulation MILP" loading="lazy"></div>
+        <div class="gallery-cap"><div class="gallery-num">06</div><div class="gallery-title" data-i18n="gal6">Rapport de simulation — résultats de l'optimisation MILP</div></div>
+      </div>
+      <div class="gallery-item" data-cap-key="gal7">
+        <div class="gallery-thumb"><img src="assets/tsp-04c-comparaison-algos.jpg" alt="Comparaison des algorithmes d'optimisation" loading="lazy"></div>
+        <div class="gallery-cap"><div class="gallery-num">07</div><div class="gallery-title" data-i18n="gal7">Comparaison des algorithmes — score &amp; recommandation</div></div>
+      </div>
+      <div class="gallery-item" data-cap-key="gal8">
+        <div class="gallery-thumb"><img src="assets/tsp-04d-analyse-risques.jpg" alt="Analyse stochastique des risques" loading="lazy"></div>
+        <div class="gallery-cap"><div class="gallery-num">08</div><div class="gallery-title" data-i18n="gal8">Analyse stochastique — VaR &amp; distribution des risques</div></div>
+      </div>
+      <div class="gallery-item" data-cap-key="gal9">
+        <div class="gallery-thumb"><img src="assets/tsp-07-planificateur.jpg" alt="Planificateur multi-jours" loading="lazy"></div>
+        <div class="gallery-cap"><div class="gallery-num">09</div><div class="gallery-title" data-i18n="gal9">Planificateur multi-jours — simulation d'horizon</div></div>
+      </div>
+      <div class="gallery-item" data-cap-key="gal10">
+        <div class="gallery-thumb"><img src="assets/tsp-08-gestion-arrets.jpg" alt="Gestion des arrêts TSP Hub 2" loading="lazy"></div>
+        <div class="gallery-cap"><div class="gallery-num">10</div><div class="gallery-title" data-i18n="gal10">Gestion des arrêts — MTTR, MTBF, disponibilité</div></div>
+      </div>
+      <div class="gallery-item" data-cap-key="gal11">
+        <div class="gallery-thumb"><img src="assets/tsp-03-pilotage-production.jpg" alt="Pilotage production SOL GRA STA" loading="lazy"></div>
+        <div class="gallery-cap"><div class="gallery-num">11</div><div class="gallery-title" data-i18n="gal11">Pilotage production — SOL / GRA / STA en direct</div></div>
+      </div>
+      <div class="gallery-item" data-cap-key="gal12">
+        <div class="gallery-thumb"><img src="assets/tsp-05-kpi-analysis.jpg" alt="Analyse des KPIs de production" loading="lazy"></div>
+        <div class="gallery-cap"><div class="gallery-num">12</div><div class="gallery-title" data-i18n="gal12">Analyse des KPIs — rendements, débits, qualité</div></div>
+      </div>
+      <div class="gallery-item" data-cap-key="gal13">
+        <div class="gallery-thumb"><img src="assets/tsp-02-salle-controle.jpg" alt="Salle de contrôle — dashboard opérationnel" loading="lazy"></div>
+        <div class="gallery-cap"><div class="gallery-num">13</div><div class="gallery-title" data-i18n="gal13">Salle de contrôle — TRS/OEE, MTTR, disponibilité</div></div>
+      </div>
+      <div class="gallery-item" data-cap-key="gal14">
+        <div class="gallery-thumb"><img src="assets/tsp-06-chatbot-nlp.jpg" alt="TSP Analytics Assistant — chatbot NLP" loading="lazy"></div>
+        <div class="gallery-cap"><div class="gallery-num">14</div><div class="gallery-title" data-i18n="gal14">TSP Analytics Assistant — chatbot NLP en action</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="lightbox">
+  <button id="lightbox-close" aria-label="Fermer">✕</button>
+  <img id="lightbox-img" src="" alt="">
+  <div id="lightbox-cap"></div>
+</div>
+
+<section class="sec" id="parcours">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="tag" data-i18n="pathTag">Parcours académique</span>
+      <h2 data-i18n="pathTitle">De la technique à l'ingénierie</h2>
+    </div>
+    <div class="timeline reveal">
+      <div class="t-item">
+        <div class="t-year" data-i18n="tYear1">Baccalauréat</div>
+        <div>
+          <div class="t-title" data-i18n="tTitle1">Bac Sciences Physiques, option Français — Mention Bien</div>
+          <div class="t-desc" data-i18n="tDesc1">Socle scientifique et technique, point de départ vers l'industriel.</div>
+        </div>
+      </div>
+      <div class="t-item">
+        <div class="t-year">2020–2021</div>
+        <div>
+          <div class="t-title" data-i18n="tTitleBTS">BTS — Conception Produits Industriels</div>
+          <div class="t-desc" data-i18n="tDescBTS">Lycée Ibn Sina. Bases en conception mécanique et industrialisation de produits.</div>
+        </div>
+      </div>
+      <div class="t-item">
+        <div class="t-year">2021–2023</div>
+        <div>
+          <div class="t-title" data-i18n="tTitle2">DUT — Génie Électrique &amp; Systèmes Automatisés</div>
+          <div class="t-desc" data-i18n="tDesc2">EST Kénitra. Bases en automatisation, électrotechnique et systèmes industriels.</div>
+        </div>
+      </div>
+      <div class="t-item">
+        <div class="t-year">2023–2026</div>
+        <div>
+          <div class="t-title" data-i18n="tTitle3">Cycle Ingénieur — Génie Industriel &amp; Logistique</div>
+          <div class="t-desc" data-i18n="tDesc3">ENSA Berrechid, Université Hassan 1er. Spécialisation en optimisation logistique, data &amp; IA industrielle.</div>
+        </div>
+      </div>
+      <div class="t-item">
+        <div class="t-year">2026</div>
+        <div>
+          <div class="t-title" data-i18n="tTitle4">Soutenance de PFE</div>
+          <div class="t-desc" data-i18n="tDesc4">TSP Logistics Manager v2.0, encadré par Dr. DAMRI Laila (académique) et Mammar Rim (professionnel).</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="experience">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="tag" data-i18n="expTag">Expérience terrain</span>
+      <h2 data-i18n="expTitle">Stages &amp; missions industrielles</h2>
+    </div>
+    <div class="reveal">
+      <div class="exp-item">
+        <div class="exp-head">
+          <div>
+            <div class="exp-role" data-i18n="exp1role">Ingénieur assistant — Architecture décisionnelle intelligente TSP</div>
+            <div class="exp-meta" data-i18n="exp1loc">El Jadida, Casablanca-Settat, Maroc · Sur site</div>
+          </div>
+          <div class="exp-org" data-i18n="exp1org">OCP GROUP · STAGE · FÉV. 2026 – MAI 2026 (4 MOIS)</div>
+        </div>
+        <div class="exp-subject" data-i18n="exp1subj">
+          « Conception d'une architecture décisionnelle intelligente pour le pilotage de la performance
+          industrielle du TSP, exploitant l'IA pour anticiper les dysfonctionnements, réduire les arrêts
+          de production et optimiser les flux logistiques. »
+        </div>
+        <div class="exp-desc" data-i18n="exp1desc">
+          Conçu et déployé TSP Logistics Manager v2.0, plateforme desktop (PyQt6/Python) centralisant le
+          pilotage de 20 silos de stockage et 3 flux de production (SOL → GRA → STA). Implémenté 6 algorithmes
+          d'optimisation (Greedy, MILP, Génétique, Q-Learning, Balance, Avancé) et une simulation Monte Carlo
+          pour l'aide à la décision sous incertitude. Intégré un chatbot NLP (TF-IDF + Random Forest, F1 = 0,847)
+          pour l'assistance opérationnelle en langage naturel.
+          Impact : −36% d'arrêts non planifiés, +13,2 points de TRS, disponibilité opérationnelle à 94,5%.
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-head">
+          <div>
+            <div class="exp-role" data-i18n="exp2role">Ingénieur assistant — Outil d'aide à la décision logistique</div>
+            <div class="exp-meta" data-i18n="exp2loc">Arrondissement d'Aïn Sebaâ, Casablanca-Settat, Maroc · Sur site</div>
+          </div>
+          <div class="exp-org" data-i18n="exp2org">LEONI MAROC · STAGE · JUIL. 2025 – AOÛT 2025 (2 MOIS)</div>
+        </div>
+        <div class="exp-subject" data-i18n="exp2subj">
+          Conception d'un outil intégrant l'optimisation volumétrique des colis, la visualisation 3D
+          des racks et le pilotage par KPIs.
+        </div>
+        <div class="exp-desc" data-i18n="exp2desc">
+          Conçu et développé une application digitale multi-modules (Python) intégrant une classification
+          ABC des colis, un sélecteur de carton optimal et une visualisation 3D des racks, réduisant les
+          pertes d'espace de stockage estimées à ~20%. Implémenté un module WMS assurant la traçabilité des
+          stocks et un dashboard KPI interactif en temps réel, réduisant les délais de traitement estimés à ~30%.
+          Appliqué les méthodologies Lean Six Sigma pour optimiser la répartition des flux internes, en
+          alignement avec les enjeux Industrie 4.0.
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-head">
+          <div>
+            <div class="exp-role" data-i18n="exp3role">Ingénieur assistant — Tarification portuaire &amp; pilotage KPI</div>
+            <div class="exp-meta" data-i18n="exp3loc">El Jadida, Casablanca-Settat, Maroc · Sur site</div>
+          </div>
+          <div class="exp-org" data-i18n="exp3org">OCP GROUP · STAGE · AOÛT 2024 (1 MOIS)</div>
+        </div>
+        <div class="exp-subject" data-i18n="exp3subj">
+          Automatisation de la tarification portuaire et pilotage par KPIs de la chaîne logistique
+          du soufre solide — Port Jorf Lasfar.
+        </div>
+        <div class="exp-desc" data-i18n="exp3desc">
+          Développé une application Excel/VBA de calcul automatisé des tarifs portuaires réels, éliminant
+          les saisies manuelles et réduisant le temps de traitement estimé à ~70% (de ~45 min à ~10 min par
+          opération). Conçu 3 tableaux de bord Power BI pour le suivi des KPIs logistiques clés : taux de
+          rotation des stocks de soufre, délais d'escale, volumes traités — réduisant le délai de reporting
+          estimé à ~60%.
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-head">
+          <div>
+            <div class="exp-role" data-i18n="exp4role">Technicien supérieur — Fiabilisation machine d'ensachage</div>
+            <div class="exp-meta" data-i18n="exp4loc">El Jadida, Casablanca-Settat, Maroc · Sur site</div>
+          </div>
+          <div class="exp-org" data-i18n="exp4org">OCP GROUP · STAGE · AVR. 2023 – MAI 2023 (2 MOIS)</div>
+        </div>
+        <div class="exp-subject" data-i18n="exp4subj">Fiabilisation de la machine d'ensachage, système T.</div>
+        <div class="exp-desc" data-i18n="exp4desc">
+          Conduit une analyse de fiabilité (MTBF/MTTR) sur la machine d'ensachage et proposé des actions
+          correctives pour améliorer la performance opérationnelle.
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-head">
+          <div>
+            <div class="exp-role" data-i18n="exp5role">Stagiaire étudiant — Fabrication des candélabres</div>
+            <div class="exp-meta" data-i18n="exp5loc">Bouznika, Casablanca-Settat, Maroc · Sur site</div>
+          </div>
+          <div class="exp-org" data-i18n="exp5org">MARCONT STRUCTURES · STAGE · AOÛT 2022 (1 MOIS)</div>
+        </div>
+        <div class="exp-desc" data-i18n="exp5desc">
+          Observation du processus de fabrication et des postes de contrôle qualité sur ligne de production.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="competences">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="tag" data-i18n="skillTag">Boîte à outils</span>
+      <h2 data-i18n="skillTitle">Compétences techniques</h2>
+    </div>
+    <div class="skills-grid reveal">
+      <div class="skill-block">
+        <div class="skill-cat" data-i18n="skillCat1">Ingénierie industrielle</div>
+        <div class="skill-tags">
+          <span>Industrial Engineering</span><span>Lean Manufacturing</span><span>Process Engineering</span>
+          <span>Manufacturing Engineering</span><span>Six Sigma</span><span>Kaizen</span><span>5S</span>
+          <span>Value Stream Mapping (VSM)</span><span data-i18n="tagContImp">Continuous Improvement</span>
+        </div>
+      </div>
+      <div class="skill-block">
+        <div class="skill-cat" data-i18n="skillCat2">Supply chain &amp; logistique</div>
+        <div class="skill-tags">
+          <span>Supply Chain Management</span><span>Logistics Management</span><span>Production Planning</span>
+          <span>Inventory Management</span><span>WMS</span><span data-i18n="tagABC">Classification ABC</span>
+        </div>
+      </div>
+      <div class="skill-block">
+        <div class="skill-cat" data-i18n="skillCat3">Data &amp; IA industrielle</div>
+        <div class="skill-tags">
+          <span>Python</span><span>SQL</span><span>XGBoost</span><span>NLP (TF-IDF)</span>
+          <span>Random Forest</span><span>Data Analysis</span><span>Business Intelligence</span>
+        </div>
+      </div>
+      <div class="skill-block">
+        <div class="skill-cat" data-i18n="skillCat4">Optimisation &amp; recherche opérationnelle</div>
+        <div class="skill-tags">
+          <span>MILP</span><span data-i18n="tagGA">Algorithmes génétiques</span><span>Q-Learning</span>
+          <span data-i18n="tagGreedy">Heuristiques Greedy</span><span>Monte Carlo</span><span>Process Optimization</span>
+        </div>
+      </div>
+      <div class="skill-block">
+        <div class="skill-cat" data-i18n="skillCat5">Pilotage &amp; performance</div>
+        <div class="skill-tags">
+          <span>TRS / OEE</span><span>KPI Development</span><span>Root Cause Analysis</span>
+          <span>Performance Analysis</span><span>MTBF / MTTR</span>
+        </div>
+      </div>
+      <div class="skill-block">
+        <div class="skill-cat" data-i18n="skillCat6">Outils &amp; management de projet</div>
+        <div class="skill-tags">
+          <span>Power BI</span><span>Microsoft Excel</span><span>Dashboard Design</span><span>PyQt6</span>
+          <span>React</span><span>VBA</span><span>Project Management</span><span>Industrial Automation</span>
+          <span>Problem Solving</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="tag" data-i18n="miniTag">Autres travaux</span>
+      <h2 data-i18n="miniTitle">Projets académiques</h2>
+    </div>
+    <div class="mini-grid reveal">
+      <div class="mini-card">
+        <div class="mini-title">OptiChain</div>
+        <div class="mini-desc" data-i18n="mini1">Pipeline Big Data pour la supply chain, avec un modèle XGBoost atteignant 99.3% de précision.</div>
+      </div>
+      <div class="mini-card">
+        <div class="mini-title" data-i18n="mini2t">Audit Supply Chain — DéliceILI</div>
+        <div class="mini-desc" data-i18n="mini2">Diagnostic complet de la chaîne logistique et recommandations d'amélioration.</div>
+      </div>
+      <div class="mini-card">
+        <div class="mini-title" data-i18n="mini3t">Conception d'entrepôt</div>
+        <div class="mini-desc" data-i18n="mini3">Design d'un entrepôt intégrant un module de gestion des approvisionnements.</div>
+      </div>
+      <div class="mini-card">
+        <div class="mini-title">Beer Game</div>
+        <div class="mini-desc" data-i18n="mini4">Simulation VBA du jeu de la bière pour illustrer l'effet coup de fouet en supply chain.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="tag" data-i18n="recTag">Preuve sociale</span>
+      <h2 data-i18n="recTitle">Recommandations</h2>
+    </div>
+    <div class="rec-grid reveal">
+      <div class="rec-card">
+        <div class="rec-quote" data-i18n="rec1quote">« J'ai eu le plaisir d'encadrer Monsieur Zakaria ES-SAHRAOUY dans le cadre de son projet de fin d'études. Il a fait preuve d'un excellent niveau académique, d'une grande rigueur scientifique et d'une capacité remarquable à analyser et structurer des problématiques complexes. Son travail reflète une maîtrise solide des outils du génie industriel et une réelle autonomie dans la recherche et le développement de solutions. »</div>
+        <div class="rec-who">Dr. DAMRI Laila</div>
+        <div class="rec-role" data-i18n="rec1role">Encadrante académique — ENSA Berrechid</div>
+      </div>
+      <div class="rec-card">
+        <div class="rec-quote" data-i18n="rec2quote">« Durant son stage, Monsieur Zakaria ES-SAHRAOUY a su s'intégrer rapidement au sein de l'équipe et comprendre les exigences du milieu industriel. Il a fait preuve d'une grande autonomie, d'un esprit d'analyse pertinent et d'une capacité à proposer des solutions concrètes et efficaces. J'ai particulièrement apprécié sa rigueur dans le traitement des données, sa maîtrise des outils d'analyse et sa contribution active à l'amélioration des processus industriels du service. »</div>
+        <div class="rec-who">Mammar Rim</div>
+        <div class="rec-role" data-i18n="rec2role">Encadrante professionnelle — OCP Group</div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer id="contact">
+  <div class="wrap">
+    <div class="contact-inner">
+      <div class="contact-title" data-i18n="footTitle">Discutons de votre prochain projet industriel.</div>
+      <div class="contact-list">
+        <a href="mailto:essahraouyzakaria10@gmail.com">essahraouyzakaria10@gmail.com</a>
+        <a href="tel:+212655062895">+212 6 55 06 28 95</a>
+        <a href="https://www.linkedin.com/in/zakaria-es-sahraouy-7692761b5/" target="_blank">linkedin.com/in/zakaria-es-sahraouy</a>
+        <a href="cv-zakaria-essahraouy.pdf" data-i18n="footCV">↓ Télécharger le CV (PDF)</a>
+      </div>
+    </div>
+    <div class="copyright">
+      <span data-i18n="footCopy">© 2026 ZAKARIA ES-SAHRAOUY — GÉNIE INDUSTRIEL &amp; LOGISTIQUE</span>
+      <span>ENSA BERRECHID — UNIVERSITÉ HASSAN 1ER</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Reveal on scroll
+  const revealEls = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, {threshold:0.15});
+  revealEls.forEach(el=>io.observe(el));
+
+  // Sequential schematic animation
+  const steps = document.querySelectorAll('.flow-step[data-step]');
+  const schemIo = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        steps.forEach((s,i)=> setTimeout(()=> s.classList.add('lit'), i*350));
+        schemIo.disconnect();
+      }
+    });
+  }, {threshold:0.4});
+  const schematicEl = document.querySelector('.schematic');
+  if(schematicEl) schemIo.observe(schematicEl);
+
+  // KPI count-up
+  const counters = document.querySelectorAll('[data-count]');
+  const countIo = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(!e.isIntersecting) return;
+      const el = e.target;
+      const target = parseFloat(el.dataset.target);
+      const decimals = el.dataset.decimals ? parseInt(el.dataset.decimals) : (target % 1 !== 0 ? 1 : 0);
+      const prefix = el.dataset.prefix || '';
+      const suffix = el.dataset.suffix || '';
+      const duration = 1400;
+      const start = performance.now();
+      function tick(now){
+        const p = Math.min((now-start)/duration, 1);
+        const eased = 1 - Math.pow(1-p, 3);
+        const val = (target*eased).toFixed(decimals);
+        el.textContent = prefix + val + suffix;
+        if(p<1) requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+      countIo.unobserve(el);
+    });
+  }, {threshold:0.5});
+  counters.forEach(c=>countIo.observe(c));
+
+  // Custom cursor
+  const dot = document.getElementById('cursor-dot');
+  const ring = document.getElementById('cursor-ring');
+  if(window.matchMedia('(pointer:fine)').matches){
+    window.addEventListener('mousemove', (e)=>{
+      dot.style.left = e.clientX+'px'; dot.style.top = e.clientY+'px';
+      ring.style.left = e.clientX+'px'; ring.style.top = e.clientY+'px';
+    });
+    document.querySelectorAll('a, button').forEach(el=>{
+      el.addEventListener('mouseenter', ()=> document.body.classList.add('cursor-pointer'));
+      el.addEventListener('mouseleave', ()=> document.body.classList.remove('cursor-pointer'));
+    });
+  }
+
+  // Gallery lightbox
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const lightboxCap = document.getElementById('lightbox-cap');
+  document.querySelectorAll('.gallery-item').forEach(item=>{
+    item.addEventListener('click', ()=>{
+      const img = item.querySelector('img');
+      const titleEl = item.querySelector('.gallery-title');
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
+      lightboxCap.textContent = titleEl.textContent;
+      lightbox.classList.add('open');
+    });
+  });
+  document.getElementById('lightbox-close').addEventListener('click', ()=> lightbox.classList.remove('open'));
+  lightbox.addEventListener('click', (e)=>{ if(e.target === lightbox) lightbox.classList.remove('open'); });
+  window.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') lightbox.classList.remove('open'); });
+
+  // Theme toggle
+  const themeBtn = document.getElementById('theme-toggle');
+  themeBtn.addEventListener('click', ()=>{
+    const html = document.documentElement;
+    const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    html.setAttribute('data-theme', next);
+  });
+
+  // Language toggle (FR default / EN)
+  const I18N = {
+    skip: {fr:"Aller au contenu principal", en:"Skip to main content"},
+    nav1: {fr:'01 <span>/</span> Projet', en:'01 <span>/</span> Project'},
+    nav2: {fr:'02 <span>/</span> Aperçu', en:'02 <span>/</span> Preview'},
+    nav3: {fr:'03 <span>/</span> Parcours', en:'03 <span>/</span> Path'},
+    nav4: {fr:'04 <span>/</span> Expérience', en:'04 <span>/</span> Experience'},
+    nav5: {fr:'05 <span>/</span> Compétences', en:'05 <span>/</span> Skills'},
+    nav6: {fr:'06 <span>/</span> Contact', en:'06 <span>/</span> Contact'},
+    heroTag: {fr:"Fiche technique — profil ingénieur", en:"Technical sheet — engineer profile"},
+    heroTitle: {fr:'Zakaria<br><span class="accent">Ingénieur Industriel</span><br>&amp; Logistique', en:'Zakaria<br><span class="accent">Industrial &amp;</span><br>Logistics Engineer'},
+    heroDesc: {fr:"Diplômé du cycle Génie Industriel &amp; Logistique de l'ENSA Berrechid (2023–2026). Je conçois des systèmes de pilotage de production et d'optimisation logistique qui allient recherche opérationnelle, IA et terrain industriel.", en:"Graduate of the Industrial &amp; Logistics Engineering program at ENSA Berrechid (2023–2026). I build production monitoring and logistics optimization systems that combine operations research, AI, and shop-floor reality."},
+    ctaProject: {fr:"Voir le projet phare →", en:"See the flagship project →"},
+    ctaCV: {fr:"Télécharger le CV ↓", en:"Download CV ↓"},
+    ctaContact: {fr:"Me contacter", en:"Get in touch"},
+    emblemRole: {fr:"Ingénieur Génie Industriel &amp; Logistique", en:"Industrial &amp; Logistics Engineer"},
+    emblemStamp: {fr:"◆ ENSA BERRECHID — DIPLÔMÉ 2026", en:"◆ ENSA BERRECHID — GRADUATE 2026"},
+    schemTitle: {fr:"Process — Pilotage Production", en:"Process — Production Control"},
+    schem1: {fr:"SOL — Sollicitation", en:"SOL — Request"},
+    schem1lbl: {fr:"Entrée", en:"Input"},
+    schem2: {fr:"GRA — Gestion / Arbitrage", en:"GRA — Management / Arbitration"},
+    schem2lbl: {fr:"TRS · OEE", en:"OEE · KPIs"},
+    schem3: {fr:"STA — Stabilisation", en:"STA — Stabilization"},
+    schem3lbl: {fr:"Sortie", en:"Output"},
+    schem4: {fr:"6 algorithmes d'optimisation", en:"6 optimization algorithms"},
+    kpiTag: {fr:"Résultats — projet de fin d'études", en:"Results — capstone project"},
+    kpiTitle: {fr:"Impact mesuré sur TSP Hub 2", en:"Measured impact on TSP Hub 2"},
+    kpiNote: {fr:"Chiffres projetés sur la durée du PFE (4 mois), à confirmer en exploitation continue.", en:"Figures projected over the 4-month capstone project, to be confirmed in ongoing operation."},
+    kpi1: {fr:"TRS (Taux de Rendement Synthétique)", en:"OEE (Overall Equipment Effectiveness)"},
+    kpi2: {fr:"Arrêts non planifiés", en:"Unplanned stoppages"},
+    kpi3: {fr:"Disponibilité opérationnelle", en:"Operational availability"},
+    kpi4: {fr:"Chatbot NLP (TF-IDF + RandomForest)", en:"NLP chatbot (TF-IDF + RandomForest)"},
+    projTag: {fr:"Projet phare — PFE", en:"Flagship project — Capstone"},
+    projName: {fr:"Plateforme prescriptive de pilotage de production", en:"Prescriptive production control platform"},
+    projDesc: {fr:"Application desktop intelligente conçue pour transformer le pilotage de production du réactif : simulation Monte Carlo, moteurs d'optimisation multiples, analyse des coûts d'arrêt et assistant conversationnel intégré, au service des équipes SOL/GRA/STA.", en:"An intelligent desktop application built to shift production control from reactive to prescriptive: Monte Carlo simulation, multiple optimization engines, downtime-cost analysis, and a built-in conversational assistant for SOL/GRA/STA teams."},
+    mod1n:{fr:"Moteurs d'optimisation", en:"Optimization engines"},
+    mod1d:{fr:"MILP, Génétique, Q-Learning, Greedy, Balance, Avancé — 6 approches comparées.", en:"MILP, Genetic, Q-Learning, Greedy, Balance, Advanced — 6 compared approaches."},
+    mod2n:{fr:"Simulation Monte Carlo", en:"Monte Carlo simulation"},
+    mod2d:{fr:"Décomposition de Cholesky pour modéliser les corrélations entre variables.", en:"Cholesky decomposition to model correlations between variables."},
+    mod3n:{fr:"StopCost Analyzer", en:"StopCost Analyzer"},
+    mod3d:{fr:"7 paliers de réduction du MTTR pour prioriser les actions correctives.", en:"7 MTTR-reduction tiers to prioritize corrective actions."},
+    mod4n:{fr:"Pilotage production", en:"Production control"},
+    mod4d:{fr:"Suivi des processus SOL → GRA → STA avec TRS / OEE en temps réel.", en:"Tracking SOL → GRA → STA processes with real-time OEE."},
+    mod5n:{fr:"Chatbot NLP", en:"NLP chatbot"},
+    mod5d:{fr:"TF-IDF + RandomForest pour répondre aux questions opérationnelles (F1 = 0.847).", en:"TF-IDF + RandomForest to answer operational questions (F1 = 0.847)."},
+    mod6n:{fr:"Interface PyQt6", en:"PyQt6 interface"},
+    mod6d:{fr:"Tableau de bord desktop pensé pour un usage terrain, rapide et lisible.", en:"Desktop dashboard designed for fast, legible shop-floor use."},
+    projDemo:{fr:"▶ Voir la démo (bientôt disponible)", en:"▶ Watch demo (coming soon)"},
+    projRepo:{fr:"⌥ Dépôt GitHub (sur demande)", en:"⌥ GitHub repo (on request)"},
+    galTag:{fr:"Interface réelle", en:"Real interface"},
+    galTitle:{fr:"Aperçu de la plateforme", en:"Platform preview"},
+    gal1:{fr:"Écran d'accueil — vue d'ensemble de la plateforme", en:"Home screen — platform overview"},
+    gal2:{fr:"Authentification — accès sécurisé au TSP Hub 2", en:"Authentication — secure access to TSP Hub 2"},
+    gal3:{fr:"Saisie &amp; résultats — 20 silos en temps réel", en:"Data entry &amp; results — 20 silos in real time"},
+    gal4:{fr:"Suivi visuel des silos — statuts codés couleur", en:"Visual silo tracking — color-coded statuses"},
+    gal5:{fr:"Simulation avancée — 6 algorithmes disponibles", en:"Advanced simulation — 6 available algorithms"},
+    gal6:{fr:"Rapport de simulation — résultats de l'optimisation MILP", en:"Simulation report — MILP optimization results"},
+    gal7:{fr:"Comparaison des algorithmes — score &amp; recommandation", en:"Algorithm comparison — score &amp; recommendation"},
+    gal8:{fr:"Analyse stochastique — VaR &amp; distribution des risques", en:"Stochastic analysis — VaR &amp; risk distribution"},
+    gal9:{fr:"Planificateur multi-jours — simulation d'horizon", en:"Multi-day planner — horizon simulation"},
+    gal10:{fr:"Gestion des arrêts — MTTR, MTBF, disponibilité", en:"Downtime management — MTTR, MTBF, availability"},
+    gal11:{fr:"Pilotage production — SOL / GRA / STA en direct", en:"Production control — SOL / GRA / STA live"},
+    gal12:{fr:"Analyse des KPIs — rendements, débits, qualité", en:"KPI analysis — yields, throughput, quality"},
+    gal13:{fr:"Salle de contrôle — TRS/OEE, MTTR, disponibilité", en:"Control room — OEE, MTTR, availability"},
+    gal14:{fr:"TSP Analytics Assistant — chatbot NLP en action", en:"TSP Analytics Assistant — NLP chatbot in action"},
+    proofTag:{fr:"Vérifiable", en:"Verifiable"},
+    proofTitle:{fr:"Preuves &amp; démonstration", en:"Proof &amp; demonstration"},
+    proofShot:{fr:"📷 Capture d'écran / GIF de l'interface TSP Logistics Manager — à ajouter", en:"📷 Screenshot / GIF of the TSP Logistics Manager interface — to be added"},
+    proofGithub:{fr:"Code source — GitHub", en:"Source code — GitHub"},
+    proofDemo:{fr:"Démonstration vidéo", en:"Video demo"},
+    proofCV:{fr:"CV complet (PDF)", en:"Full CV (PDF)"},
+    pathTag:{fr:"Parcours académique", en:"Academic path"},
+    pathTitle:{fr:"De la technique à l'ingénierie", en:"From technician to engineer"},
+    tYear1:{fr:"Baccalauréat", en:"High-school diploma"},
+    tTitle1:{fr:"Bac Sciences Physiques, option Français — Mention Bien", en:"Physics Baccalaureate, French track — Honors"},
+    tDesc1:{fr:"Socle scientifique et technique, point de départ vers l'industriel.", en:"Scientific and technical foundation, the starting point toward industry."},
+    tTitle2:{fr:"DUT — Génie Électrique &amp; Systèmes Automatisés", en:"Associate Degree — Electrical Engineering &amp; Automated Systems"},
+    tDesc2:{fr:"EST Kénitra. Bases en automatisation, électrotechnique et systèmes industriels.", en:"EST Kénitra. Foundations in automation, electrical engineering, and industrial systems."},
+    tTitleBTS:{fr:"BTS — Conception Produits Industriels", en:"Advanced Technician Certificate — Industrial Product Design"},
+    tDescBTS:{fr:"Lycée Ibn Sina. Bases en conception mécanique et industrialisation de produits.", en:"Lycée Ibn Sina. Foundations in mechanical design and product industrialization."},
+    tTitle3:{fr:"Cycle Ingénieur — Génie Industriel &amp; Logistique", en:"Engineering degree — Industrial &amp; Logistics Engineering"},
+    tDesc3:{fr:"ENSA Berrechid, Université Hassan 1er. Spécialisation en optimisation logistique, data &amp; IA industrielle.", en:"ENSA Berrechid, Hassan 1st University. Specialization in logistics optimization, data &amp; industrial AI."},
+    tTitle4:{fr:"Soutenance de PFE", en:"Capstone defense"},
+    tDesc4:{fr:"TSP Logistics Manager v2.0, encadré par Dr. DAMRI Laila (académique) et Mammar Rim (professionnel).", en:"TSP Logistics Manager v2.0, supervised by Dr. DAMRI Laila (academic) and Mammar Rim (industry)."},
+    expTag:{fr:"Expérience terrain", en:"Field experience"},
+    expTitle:{fr:"Stages &amp; missions industrielles", en:"Internships &amp; industrial assignments"},
+    exp1role:{fr:"Ingénieur assistant — Architecture décisionnelle intelligente TSP", en:"Assistant Engineer — Intelligent decision-making architecture for TSP"},
+    exp1loc:{fr:"El Jadida, Casablanca-Settat, Maroc · Sur site", en:"El Jadida, Casablanca-Settat, Morocco · On-site"},
+    exp1org:{fr:"OCP GROUP · STAGE · FÉV. 2026 – MAI 2026 (4 MOIS)", en:"OCP GROUP · INTERNSHIP · FEB 2026 – MAY 2026 (4 MONTHS)"},
+    exp1subj:{fr:"« Conception d'une architecture décisionnelle intelligente pour le pilotage de la performance industrielle du TSP, exploitant l'IA pour anticiper les dysfonctionnements, réduire les arrêts de production et optimiser les flux logistiques. »", en:"\"Designing an intelligent decision-making architecture to drive TSP's industrial performance, using AI to anticipate failures, reduce production stoppages, and optimize logistics flows.\""},
+    exp1desc:{fr:"Conçu et déployé TSP Logistics Manager v2.0, plateforme desktop (PyQt6/Python) centralisant le pilotage de 20 silos de stockage et 3 flux de production (SOL → GRA → STA). Implémenté 6 algorithmes d'optimisation (Greedy, MILP, Génétique, Q-Learning, Balance, Avancé) et une simulation Monte Carlo pour l'aide à la décision sous incertitude. Intégré un chatbot NLP (TF-IDF + Random Forest, F1 = 0,847) pour l'assistance opérationnelle en langage naturel. Impact : −36% d'arrêts non planifiés, +13,2 points de TRS, disponibilité opérationnelle à 94,5%.", en:"Designed and deployed TSP Logistics Manager v2.0, a desktop platform (PyQt6/Python) centralizing control of 20 storage silos and 3 production flows (SOL → GRA → STA). Implemented 6 optimization algorithms (Greedy, MILP, Genetic, Q-Learning, Balance, Advanced) and a Monte Carlo simulation for decision-making under uncertainty. Integrated an NLP chatbot (TF-IDF + Random Forest, F1 = 0.847) for natural-language operational support. Impact: −36% unplanned stoppages, +13.2 points of OEE, operational availability raised to 94.5%."},
+    exp2role:{fr:"Ingénieur assistant — Outil d'aide à la décision logistique", en:"Assistant Engineer — Logistics decision-support tool"},
+    exp2loc:{fr:"Arrondissement d'Aïn Sebaâ, Casablanca-Settat, Maroc · Sur site", en:"Aïn Sebaâ district, Casablanca-Settat, Morocco · On-site"},
+    exp2org:{fr:"LEONI MAROC · STAGE · JUIL. 2025 – AOÛT 2025 (2 MOIS)", en:"LEONI MOROCCO · INTERNSHIP · JUL 2025 – AUG 2025 (2 MONTHS)"},
+    exp2subj:{fr:"Conception d'un outil intégrant l'optimisation volumétrique des colis, la visualisation 3D des racks et le pilotage par KPIs.", en:"Design of a tool integrating parcel volumetric optimization, 3D rack visualization, and KPI-based control."},
+    exp2desc:{fr:"Conçu et développé une application digitale multi-modules (Python) intégrant une classification ABC des colis, un sélecteur de carton optimal et une visualisation 3D des racks, réduisant les pertes d'espace de stockage estimées à ~20%. Implémenté un module WMS assurant la traçabilité des stocks et un dashboard KPI interactif en temps réel, réduisant les délais de traitement estimés à ~30%. Appliqué les méthodologies Lean Six Sigma pour optimiser la répartition des flux internes, en alignement avec les enjeux Industrie 4.0.", en:"Designed and developed a multi-module digital application (Python) featuring ABC classification of parcels, an optimal carton selector, and 3D rack visualization, cutting estimated storage-space loss by ~20%. Implemented a WMS module for stock traceability and a real-time interactive KPI dashboard, cutting estimated processing time by ~30%. Applied Lean Six Sigma methods to optimize internal flow allocation, aligned with Industry 4.0 goals."},
+    exp3role:{fr:"Ingénieur assistant — Tarification portuaire &amp; pilotage KPI", en:"Assistant Engineer — Port pricing &amp; KPI control"},
+    exp3loc:{fr:"El Jadida, Casablanca-Settat, Maroc · Sur site", en:"El Jadida, Casablanca-Settat, Morocco · On-site"},
+    exp3org:{fr:"OCP GROUP · STAGE · AOÛT 2024 (1 MOIS)", en:"OCP GROUP · INTERNSHIP · AUG 2024 (1 MONTH)"},
+    exp3subj:{fr:"Automatisation de la tarification portuaire et pilotage par KPIs de la chaîne logistique du soufre solide — Port Jorf Lasfar.", en:"Automation of port pricing and KPI-based control of the solid sulfur logistics chain — Jorf Lasfar Port."},
+    exp3desc:{fr:"Développé une application Excel/VBA de calcul automatisé des tarifs portuaires réels, éliminant les saisies manuelles et réduisant le temps de traitement estimé à ~70% (de ~45 min à ~10 min par opération). Conçu 3 tableaux de bord Power BI pour le suivi des KPIs logistiques clés : taux de rotation des stocks de soufre, délais d'escale, volumes traités — réduisant le délai de reporting estimé à ~60%.", en:"Built an Excel/VBA application for automated real port-tariff calculation, eliminating manual entry and cutting estimated processing time by ~70% (from ~45 min to ~10 min per operation). Designed 3 Power BI dashboards to track key logistics KPIs: sulfur stock turnover, port-call times, volumes handled — cutting estimated reporting time by ~60%."},
+    exp4role:{fr:"Technicien supérieur — Fiabilisation machine d'ensachage", en:"Senior Technician — Bagging machine reliability"},
+    exp4loc:{fr:"El Jadida, Casablanca-Settat, Maroc · Sur site", en:"El Jadida, Casablanca-Settat, Morocco · On-site"},
+    exp4org:{fr:"OCP GROUP · STAGE · AVR. 2023 – MAI 2023 (2 MOIS)", en:"OCP GROUP · INTERNSHIP · APR 2023 – MAY 2023 (2 MONTHS)"},
+    exp4subj:{fr:"Fiabilisation de la machine d'ensachage, système T.", en:"Reliability improvement of the bagging machine, system T."},
+    exp4desc:{fr:"Conduit une analyse de fiabilité (MTBF/MTTR) sur la machine d'ensachage et proposé des actions correctives pour améliorer la performance opérationnelle.", en:"Conducted a reliability analysis (MTBF/MTTR) on the bagging machine and proposed corrective actions to improve operational performance."},
+    exp5role:{fr:"Stagiaire étudiant — Fabrication des candélabres", en:"Student Intern — Candelabra manufacturing"},
+    exp5loc:{fr:"Bouznika, Casablanca-Settat, Maroc · Sur site", en:"Bouznika, Casablanca-Settat, Morocco · On-site"},
+    exp5org:{fr:"MARCONT STRUCTURES · STAGE · AOÛT 2022 (1 MOIS)", en:"MARCONT STRUCTURES · INTERNSHIP · AUG 2022 (1 MONTH)"},
+    exp5desc:{fr:"Observation du processus de fabrication et des postes de contrôle qualité sur ligne de production.", en:"Observed the manufacturing process and quality-control stations on the production line."},
+    skillTag:{fr:"Boîte à outils", en:"Toolbox"},
+    skillTitle:{fr:"Compétences techniques", en:"Technical skills"},
+    skillCat1:{fr:"Ingénierie industrielle", en:"Industrial engineering"},
+    skillCat2:{fr:"Supply chain &amp; logistique", en:"Supply chain &amp; logistics"},
+    skillCat3:{fr:"Data &amp; IA industrielle", en:"Data &amp; industrial AI"},
+    skillCat4:{fr:"Optimisation &amp; recherche opérationnelle", en:"Optimization &amp; operations research"},
+    skillCat5:{fr:"Pilotage &amp; performance", en:"Performance management"},
+    skillCat6:{fr:"Outils &amp; management de projet", en:"Tools &amp; project management"},
+    tagContImp:{fr:"Continuous Improvement", en:"Continuous Improvement"},
+    tagABC:{fr:"Classification ABC", en:"ABC Classification"},
+    tagGA:{fr:"Algorithmes génétiques", en:"Genetic Algorithms"},
+    tagGreedy:{fr:"Heuristiques Greedy", en:"Greedy Heuristics"},
+    miniTag:{fr:"Autres travaux", en:"Other work"},
+    miniTitle:{fr:"Projets académiques", en:"Academic projects"},
+    mini1:{fr:"Pipeline Big Data pour la supply chain, avec un modèle XGBoost atteignant 99.3% de précision.", en:"Big Data pipeline for supply chain, with an XGBoost model reaching 99.3% accuracy."},
+    mini2t:{fr:"Audit Supply Chain — DéliceILI", en:"Supply Chain Audit — DéliceILI"},
+    mini2:{fr:"Diagnostic complet de la chaîne logistique et recommandations d'amélioration.", en:"Full supply-chain diagnostic and improvement recommendations."},
+    mini3t:{fr:"Conception d'entrepôt", en:"Warehouse design"},
+    mini3:{fr:"Design d'un entrepôt intégrant un module de gestion des approvisionnements.", en:"Warehouse layout design integrating a procurement management module."},
+    mini4:{fr:"Simulation VBA du jeu de la bière pour illustrer l'effet coup de fouet en supply chain.", en:"VBA simulation of the Beer Game illustrating the bullwhip effect in supply chains."},
+    recTag:{fr:"Preuve sociale", en:"Social proof"},
+    recTitle:{fr:"Recommandations", en:"Recommendations"},
+    rec1quote:{fr:"« J'ai eu le plaisir d'encadrer Monsieur Zakaria ES-SAHRAOUY dans le cadre de son projet de fin d'études. Il a fait preuve d'un excellent niveau académique, d'une grande rigueur scientifique et d'une capacité remarquable à analyser et structurer des problématiques complexes. Son travail reflète une maîtrise solide des outils du génie industriel et une réelle autonomie dans la recherche et le développement de solutions. »", en:"\"It was a pleasure to supervise Mr. Zakaria ES-SAHRAOUY during his capstone project. He showed an excellent academic level, strong scientific rigor, and a remarkable ability to analyze and structure complex problems. His work reflects a solid command of industrial engineering tools and genuine autonomy in researching and developing solutions.\""},
+    rec1role:{fr:"Encadrante académique — ENSA Berrechid", en:"Academic supervisor — ENSA Berrechid"},
+    rec2quote:{fr:"« Durant son stage, Monsieur Zakaria ES-SAHRAOUY a su s'intégrer rapidement au sein de l'équipe et comprendre les exigences du milieu industriel. Il a fait preuve d'une grande autonomie, d'un esprit d'analyse pertinent et d'une capacité à proposer des solutions concrètes et efficaces. J'ai particulièrement apprécié sa rigueur dans le traitement des données, sa maîtrise des outils d'analyse et sa contribution active à l'amélioration des processus industriels du service. »", en:"\"During his internship, Mr. Zakaria ES-SAHRAOUY quickly integrated into the team and understood the demands of the industrial environment. He showed great autonomy, sound analytical thinking, and an ability to propose concrete, effective solutions. I particularly valued his rigor in data handling, his command of analytical tools, and his active contribution to improving the department's industrial processes.\""},
+    rec2role:{fr:"Encadrante professionnelle — OCP Group", en:"Industry supervisor — OCP Group"},
+    footTitle:{fr:"Discutons de votre prochain projet industriel.", en:"Let's talk about your next industrial project."},
+    footCV:{fr:"↓ Télécharger le CV (PDF)", en:"↓ Download CV (PDF)"},
+    footCopy:{fr:"© 2026 ZAKARIA ES-SAHRAOUY — GÉNIE INDUSTRIEL &amp; LOGISTIQUE", en:"© 2026 ZAKARIA ES-SAHRAOUY — INDUSTRIAL &amp; LOGISTICS ENGINEERING"}
+  };
+
+  let currentLang = 'fr';
+  const langBtn = document.getElementById('lang-toggle');
+  langBtn.addEventListener('click', ()=>{
+    currentLang = currentLang === 'fr' ? 'en' : 'fr';
+    document.documentElement.lang = currentLang;
+    document.querySelectorAll('[data-i18n]').forEach(el=>{
+      const key = el.getAttribute('data-i18n');
+      if(I18N[key]) el.innerHTML = I18N[key][currentLang];
+    });
+  });
+</script>
+
+</body>
+</html>
